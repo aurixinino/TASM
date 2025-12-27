@@ -1188,6 +1188,6 @@ Contributions are welcome! Please see the documentation for development guidelin
 
 **TASM** provides professional assembly development with industry-standard compatibility, making it ideal for both education and production use with the TriCore architecture.
 
-*For detailed command-line reference and advanced features, see [command-line.md](command-line.md).*
+*For detailed command-line reference and advanced features, see [command-line.md](./documentation/command-line.md).*
 
 *Last updated: December 27, 2025*
