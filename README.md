@@ -1141,13 +1141,13 @@ TASM uses a JSON configuration file for customization:
 ## 📖 Additional Documentation
 
 ### Core Documentation
-- **[Command-Line Interface](command-line.md)** - Complete NASM-compatible command reference with all options (1200+ lines)
-- **[Architecture Overview](architecture.md)** - Three-phase compilation, instruction loading, and configuration
+- **[Command-Line Interface](./documentation/command-line.md)** - Complete NASM-compatible command reference with all options (1200+ lines)
+- **[Architecture Overview](./documentation/architecture.md)** - Three-phase compilation, instruction loading, and configuration
 
 ### Technical Documentation  
-- **[Instruction Encoder](instruction_encoder.md)** - Encoder internals, operand parsing, variant selection
-- **[Macro Guide](MACRO_EXPANDER_GUIDE.md)** - Macro system and expansion templates
-- **[Testing Guide](TRICORE_TESTING_GUIDE.md)** - Comprehensive test suite documentation
+- **[Instruction Encoder](./documentation/instruction_encoder.md)** - Encoder internals, operand parsing, variant selection
+- **[Macro Guide](./documentation/macros.md)** - Macro system and expansion templates
+- **[Testing Guide](./documentation/testing.md)** - Comprehensive test suite documentation
 
 ### Processor Documentation
 - **[TriCore TC1.6](tricore_tc1.6.md)** - TriCore 1.6 instruction set reference (2100+ lines)
