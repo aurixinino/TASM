@@ -1,0 +1,36 @@
+ 
+======================================== 
+TASM Comprehensive Test Suite 
+Run Date: 27/12/2025 10:52:16,78 
+======================================== 
+ 
+Test Suite 0: Basic Tests 
+[FAIL] Basic Tests 
+ 
+Test Suite 1: Register Encoding Tests 
+[FAIL] Register Encoding Tests 
+ 
+Test Suite 2: Advanced Encoding Tests 
+[FAIL] Advanced Encoding Tests 
+ 
+Test Suite 3: Operand Format Tests 
+[FAIL] Operand Format Tests 
+ 
+Test Suite 4: Encoder Validation (4617 instructions) 
+[FAIL] Encoder Validation 
+ 
+Test Suite 6: Macro Tests 
+[FAIL] Macro Tests 
+ 
+ 
+======================================== 
+Test Suite Summary 
+======================================== 
+Total Test Suites: 6 
+Test Suites Passed: 0 
+Test Suites Failed: 6 
+Pass Rate: 0% 
+======================================== 
+ 
+Run completed: 27/12/2025 10:52:17,04 
+ 

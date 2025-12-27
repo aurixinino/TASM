@@ -1,0 +1,61 @@
+TASM Encoding Validation Test Results 
+Date: 27/12/2025 10:55:02,78 
+======================================== 
+ 
+Test 1: MOV Immediate Encoding 
+ 
+Test 2: MOV Register Encoding 
+ 
+Test 3: E/P Register Encoding 
+ 
+Test 3a: MOV.AA Address Register Encoding 
+ 
+Test 4: MOV Instructions Comprehensive 
+[PASS] MOV Instructions Comprehensive
+ 
+Test 5: Instruction Size Selection 
+[PASS] Instruction Size Selection
+ 
+Test 6: Forward Jump References 
+[PASS] Forward Jump References
+ 
+Test 7: LOOP Instruction Optimization 
+[PASS] LOOP Instruction Optimization
+ 
+Test 8: LOOP Instruction Matching 
+[PASS] LOOP Instruction Matching
+ 
+Test 9: Constant Scaling 
+ 
+Test 10: Variant Selection 
+ 
+Test 6: Force 32-Bit Optimization 
+[PASS] Force 32-Bit Optimization
+ 
+Test 7: Specific Register Matching 
+ 
+Test 8: TriCore Instruction Set 
+ 
+Test 9: Encoder Validation 
+[INFO] Encoder Validation - See report in output\encoder_validation\ 
+ 
+Test 10: Implicit Operand Validation 
+ 
+Test 11: ST.W Encoding Regression 
+[FAIL] ST.W Encoding Regression
+ 
+ 
+Test 12: ST.B Encoding Regression 
+ 
+Test 13: GCC Style Regression 
+[PASS] GCC-Style Labels with dots
+[PASS] GCC-Style Annotations with hash
+ 
+======================================== 
+Test Suite Summary 
+======================================== 
+Total Tests: 19 
+Tests Passed: 17 
+Tests Failed: 2 
+Pass Rate: 89% 
+======================================== 

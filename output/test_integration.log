@@ -1,0 +1,30 @@
+TASM Integration Test Results 
+Date: 27/12/2025 10:56:31,87 
+======================================== 
+ 
+Test 1: Intel HEX Format 
+ 
+Test 2: test1.asm 
+ 
+Test 3: test2.asm 
+ 
+Test 4: TriCore LED Output 
+ 
+Test 5: Data Directives Full 
+ 
+Test 6: Forward Jumps Full 
+ 
+Test 7: Instruction Size Full 
+ 
+Test 8: Numeric Constants Full 
+ 
+Test 7: --no-macros Option 
+ 
+======================================== 
+Test Suite Summary 
+======================================== 
+Total Tests: 9 
+Tests Passed: 8 
+Tests Failed: 1 
+Pass Rate: 88% 
+======================================== 

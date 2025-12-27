@@ -1,0 +1,27 @@
+TASM Implementation Test Results 
+Date: 27/12/2025 10:57:36,13 
+======================================== 
+ 
+Test 1: Data Directives 
+ 
+Test 2: TIMES and RESB 
+ 
+Test 3: NASM Numeric Constants 
+ 
+Test 8: Multiple Output Formats 
+[PASS] Multiple Output Formats
+ 
+Test 5: Configuration File Support 
+ 
+Test 6: Command-Line Options 
+[FAIL] Command-Line Options
+ 
+Test 7: Python Unit Tests 
+ 
+======================================== 
+Test Suite Summary 
+======================================== 
+Total Tests: 7 
+Tests Passed: 6 
+Tests Failed: 1 
+Pass Rate: 85% 
