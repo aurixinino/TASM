@@ -1,0 +1,660 @@
+# Instruction Encoder Documentation
+
+## Overview
+
+The `instruction_encoder.py` module is the core component of the TASM assembler that handles parsing, matching, and encoding assembly instructions into binary machine code. It works in conjunction with the `instruction_loader.py` module to transform human-readable assembly into executable binary.
+
+**Key Responsibilities:**
+- Parse assembly instruction lines into structured data
+- Classify and tag operands by type
+- Match instructions with their definitions from the instruction set
+- Validate operand counts and types
+- Encode instructions into binary values (16-bit or 32-bit)
+- Handle PC-relative addressing and label resolution
+- Optimize instruction variant selection
+
+---
+
+## 1. Operand Parsing and Tagging
+
+### 1.1 Operand Data Structure
+
+Each operand is represented by the `ParsedOperand` dataclass:
+
+```python
+@dataclass
+class ParsedOperand:
+    text: str   # Original operand text (e.g., "d4", "#1", "[a15]")
+    type: str   # Operand type tag
+```
+
+### 1.2 Operand Type Tags
+
+The encoder classifies operands into five types:
+
+| Type Tag | Description | Examples |
+|----------|-------------|----------|
+| `reg_d` | Data Register | `d1`, `D[4]`, `d[15]` |
+| `reg_a` | Address Register | `a2`, `A[10]`, `a[15]` |
+| `reg_e` | Extended Register | `e4`, `E[2]`, `e[0]` |
+| `reg_p` | Pointer Register | `p0`, `P[1]`, `p[2]` |
+| `imm` | Immediate/Constant/Label | `#10`, `0xFF`, `loop_start`, `255` |
+
+### 1.3 Classification Logic
+
+The `_classify_operand_type()` method determines the operand type:
+
+```python
+def _classify_operand_type(self, operand: str) -> str:
+    # Clean the operand (remove brackets, whitespace)
+    clean = operand.strip().replace('[', '').replace(']', '').lower()
+    
+    # Check first character to determine register type
+    if clean and len(clean) >= 2:
+        first_char = clean[0]
+        if first_char == 'd' and (clean[1].isdigit() or len(clean) == 1):
+            return 'reg_d'
+        elif first_char == 'a' and (clean[1].isdigit() or len(clean) == 1):
+            return 'reg_a'
+        # ... similar for 'e' and 'p'
+    
+    # Everything else is immediate
+    return 'imm'
+```
+
+**Supported Formats:**
+- Simple: `d4`, `a15`
+- Bracketed: `D[1]`, `A[2]`
+- GCC-style: `%d1`, `%a2`
+- With spaces: `D[ 15 ]`, `A[ 10 ]`
+
+**Important:** The classification happens **at parse time** before any value resolution, enabling type-based instruction matching.
+
+---
+
+## 2. Instruction Matching Logic
+
+### 2.1 Overview
+
+When multiple instruction variants exist (e.g., MOV has 9 variants, LOOP has 2), the encoder must select the most appropriate one. This is a multi-stage process:
+
+```
+Parse → Normalize → Find Base Match → Filter Variants → Optimize → Encode
+```
+
+### 2.2 Stage 1: Operand Normalization
+
+Before matching, operands are normalized:
+
+```python
+# Example: [a[2]] → a2, [A[2]] → A2
+for op in parsed.operands:
+    split_ops = self.loader.split_compound_operands(op.text)
+    for split_op in split_ops:
+        # Remove all outer brackets
+        while bracketed.startswith('[') and bracketed.endswith(']'):
+            bracketed = bracketed[1:-1].strip()
+        
+        # Convert a[2] format to a2
+        reg_match = re.match(r'^([aAeEdDpP])\[(\d+)\]$', bracketed)
+        if reg_match:
+            bracketed = f"{reg_match.group(1)}{reg_match.group(2)}"
+```
+
+**Purpose:** Ensures consistent operand representation regardless of input format.
+
+### 2.3 Stage 2: Base Instruction Matching
+
+The `find_instruction()` method in `instruction_loader.py` performs initial matching:
+
+1. **Operand Count Filter:** Only variants with matching operand count
+2. **Type Matching:** Matches operand types (reg_d, reg_a, imm)
+3. **Range-Based Selection:** For multiple matches, checks if operand values fit in bit fields
+
+**Special Case - LOOP with Labels:**
+```python
+# TEMPORARY: For LOOP instructions with labels, always use largest variant
+if mnemonic.upper() == 'LOOP' and operands:
+    has_label = # Check if any operand is a label (not register/immediate)
+    if has_label:
+        # Return largest variant (32-bit) for LOOP with labels
+        return matching_by_count[0]  # After sorting by size descending
+```
+
+**Rationale:** During first pass, label displacements aren't known yet, so we conservatively select the largest variant to ensure the displacement will fit.
+
+### 2.4 Stage 3: Variant Filtering (Optimization Phase)
+
+For instructions in the `optimize_mnemonics` set, additional filtering is applied:
+
+```python
+optimize_mnemonics = {'J', 'LOOP', 'JNZ', 'JEQ', 'JNE', 'JGE', 'JL', 'JLT', 
+                      'JGEU', 'JLTU', 'CALL', 'MOV', 'MOV.AA', 'ADD', 'SUB'}
+```
+
+#### Filter 1: Register Constraint Matching
+
+**Purpose:** Ensure specific register requirements are met.
+
+**Examples:**
+- `MOV D[15], const8` only matches if operand is actually `D15`
+- `MOV.AA A[a], A[b]` matches any address registers
+
+**Implementation:**
+```python
+for variant in matching_variants:
+    variant_syntax_operands = self._extract_operand_patterns(variant.syntax)
+    
+    for i, syntax_op in enumerate(variant_syntax_operands):
+        # Extract actual operand
+        actual_operand = normalized_operands[i].text
+        actual_reg_match = re.match(r'^([DAEP])(\d+)$', actual_operand.upper())
+        
+        # Check if syntax expects a register
+        syntax_reg_match = re.match(r'^([DAEP])\[', syntax_op.upper())
+        
+        # TYPE match: D vs E vs A vs P
+        if actual_type != syntax_type:
+            is_compatible = False
+        
+        # NUMBER match: D[15] only matches D15
+        if spec_num != actual_num:
+            is_compatible = False
+```
+
+#### Filter 2: Operand Kind Matching
+
+**Purpose:** Distinguish between register and immediate operands.
+
+**Key Concept:** A variant expecting `const4` (immediate) should NOT match if the operand is a register.
+
+**Example:**
+- `MOV D[a], const4` should match `MOV d4, #5` (immediate)
+- `MOV D[a], const4` should NOT match `MOV d4, d2` (register)
+- `MOV D[a], D[b]` should match `MOV d4, d2` (register)
+
+**Implementation:**
+```python
+# Case 1: Syntax expects immediate, operand IS a register → INCOMPATIBLE
+elif not syntax_reg_match and actual_reg_match:
+    is_compatible = False
+
+# Case 2: Syntax expects register, operand is NOT a register → INCOMPATIBLE  
+elif syntax_reg_match and not actual_reg_match:
+    is_compatible = False
+```
+
+#### Filter 3: Value Fit Checking
+
+**Purpose:** Select the smallest variant that can accommodate the operand values.
+
+**Process:**
+1. Parse all operand values (applying /2 or /4 scaling if needed)
+2. For each variant, check if all immediate/offset operands fit in their bit fields
+3. Skip register operands (they don't have bit width constraints)
+
+**Example:**
+```python
+for variant in matching_variants:
+    can_fit = True
+    for i, value in enumerate(parsed_operand_values):
+        if operand_is_register[i]:
+            continue  # Skip registers
+        
+        op_pos, op_len = variant.get_operand_info(op_num)
+        max_signed = (1 << (op_len - 1)) - 1
+        min_signed = -(1 << (op_len - 1))
+        max_unsigned = (1 << op_len) - 1
+        
+        if not ((min_signed <= value <= max_signed) or (0 <= value <= max_unsigned)):
+            can_fit = False
+            break
+    
+    if can_fit:
+        suitable_variants.append(variant)
+```
+
+### 2.5 Stage 4: Variant Selection
+
+After filtering, select the best variant:
+
+1. **If suitable variants exist:** Select smallest (code size optimization)
+2. **If no suitable variants:** Fall back to largest (most likely to fit)
+
+```python
+if suitable_variants:
+    suitable_variants.sort(key=lambda v: v.opcode_size)
+    best_variant = suitable_variants[0]  # Smallest
+else:
+    all_variants.sort(key=lambda v: v.opcode_size, reverse=True)
+    fallback_variant = all_variants[0]  # Largest
+```
+
+### 2.6 Matching Example: MOV Instruction
+
+**Scenario:** Encoding `MOV d4, #1`
+
+**Step 1:** Find all MOV variants (9 total)
+- `MOV D[a], D[b]` - 16-bit, register to register
+- `MOV D[a], const4` - 16-bit, 4-bit immediate
+- `MOV D[15], const8` - 16-bit, 8-bit immediate (D15 only)
+- `MOV D[c], const16` - 32-bit, 16-bit immediate
+- ... (5 more variants)
+
+**Step 2:** Filter by operand count = 2
+- All 9 variants have 2 operands ✓
+
+**Step 3:** Filter by register constraints
+- `MOV D[15], const8` → Requires D15, operand is D4 → ✗ REMOVED
+- `MOV D[a], D[b]` → Requires 2 registers, operand 2 is immediate → ✗ REMOVED
+- `MOV D[a], const4` → D[a] matches D4, const4 matches #1 → ✓ KEPT
+- `MOV D[c], const16` → D[c] matches D4, const16 matches #1 → ✓ KEPT
+
+**Step 4:** Check value fit
+- `MOV D[a], const4` → 1 fits in 4 bits (max 15) → ✓ SUITABLE
+- `MOV D[c], const16` → 1 fits in 16 bits (max 65535) → ✓ SUITABLE
+
+**Step 5:** Select smallest
+- 16-bit variant selected → `MOV D[a], const4`
+
+**Result:** Encodes as 16-bit instruction (0x1482)
+
+---
+
+## 3. Instruction Encoding
+
+### 3.1 Encoding Paths
+
+The encoder supports two encoding paths:
+
+1. **Split Operand Encoding:** For instructions where one operand spans multiple bit fields
+2. **Standard Encoding:** For instructions with contiguous operand fields
+
+#### Path Selection
+
+```python
+# Check for split operand syntax: {[n:m]...}
+split_operand_pattern = r'\{\s*\[\d+:\d+\]'
+has_split_operand = re.search(split_operand_pattern, definition.syntax)
+
+if has_split_operand:
+    # Use split operand encoding
+    binary_value = self._encode_split_operand_instruction(...)
+else:
+    # Use standard encoding
+    # ... encode each operand normally
+```
+
+### 3.2 Standard Encoding Process
+
+**High-Level Flow:**
+
+```
+1. Start with base opcode
+2. Parse operand values
+3. Apply scaling (/2, /4)
+4. For each operand:
+   a. Get bit field position and length
+   b. Validate value fits
+   c. Mask and shift value
+   d. OR into binary value
+5. Return final encoded instruction
+```
+
+#### Step-by-Step Example: `ADD d2, d4, #5`
+
+**Instruction Definition:**
+- Syntax: `ADD D[c], D[a], const4`
+- Opcode: 0x8B (16-bit)
+- Operand 1 (D[c]): position=28, length=4
+- Operand 2 (D[a]): position=8, length=4  
+- Operand 3 (const4): position=16, length=4
+
+**Encoding Steps:**
+
+1. **Start with opcode:**
+   ```
+   binary_value = 0x008B
+   ```
+
+2. **Parse operands:**
+   ```
+   operand[0] = "d2" → value = 2
+   operand[1] = "d4" → value = 4
+   operand[2] = "#5" → value = 5
+   ```
+
+3. **Encode operand 1 (d2):**
+   ```
+   op_mask = (1 << 4) - 1 = 0xF
+   encoded = (2 & 0xF) << 28 = 0x20000000
+   binary_value |= 0x20000000
+   ```
+
+4. **Encode operand 2 (d4):**
+   ```
+   encoded = (4 & 0xF) << 8 = 0x0400
+   binary_value |= 0x0400
+   ```
+
+5. **Encode operand 3 (#5):**
+   ```
+   encoded = (5 & 0xF) << 16 = 0x050000
+   binary_value |= 0x050000
+   ```
+
+6. **Final result:**
+   ```
+   binary_value = 0x2005048B (32-bit, but only 16 bits used)
+   hex_value = "0x048B" (formatted as 16-bit)
+   ```
+
+### 3.3 Split Operand Encoding
+
+**Purpose:** Handle instructions where one operand is encoded across multiple non-contiguous bit fields.
+
+**Example: J (Jump) Instruction**
+
+**Syntax:** `J disp24 {[15:0],[23:16]}`
+
+**Meaning:**
+- Single operand `disp24` (24-bit displacement)
+- Split into 2 parts:
+  - Part 1: bits [15:0] of disp24 → 16 bits
+  - Part 2: bits [23:16] of disp24 → 8 bits
+
+**Encoding Process:**
+
+1. **Parse split syntax:**
+   ```python
+   split_operand_pos = 1  # First operand
+   bitfield_ranges = [(15, 0), (23, 16)]
+   ```
+
+2. **Parse operand value:**
+   ```python
+   operand_value = self.parse_operand_value("target_label", current_address, labels)
+   # Assume result: 0x1234 (4660 bytes displacement)
+   ```
+
+3. **Extract bit fields:**
+   ```python
+   # Part 1: bits [15:0]
+   shift = 0
+   mask = (1 << 16) - 1 = 0xFFFF
+   part1_value = (0x1234 >> 0) & 0xFFFF = 0x1234
+   
+   # Part 2: bits [23:16]  
+   shift = 16
+   mask = (1 << 8) - 1 = 0xFF
+   part2_value = (0x1234 >> 16) & 0xFF = 0x00
+   ```
+
+4. **Encode into instruction:**
+   ```python
+   # Get bit positions from instruction definition
+   op1_pos, op1_len = definition.get_operand_info(1)  # Part 1
+   op2_pos, op2_len = definition.get_operand_info(2)  # Part 2
+   
+   binary_value |= (part1_value & op1_mask) << op1_pos
+   binary_value |= (part2_value & op2_mask) << op2_pos
+   ```
+
+### 3.4 PC-Relative Addressing
+
+For branch/jump instructions with labels:
+
+**Calculation:**
+```python
+displacement_bytes = label_address - current_address
+
+# Example:
+# current_address = 0x80000010
+# label_address = 0x80000020
+# displacement_bytes = 0x10 (16 bytes)
+```
+
+**Scaling:**
+- TriCore uses word-aligned addressing for some instructions
+- `/2` modifier: displacement in half-words
+- `/4` modifier: displacement in words
+
+```python
+if '/2' in syntax_op:
+    operand_value = displacement_bytes // 2
+    # 16 bytes / 2 = 8 half-words
+```
+
+**Forward Reference Handling:**
+
+During first pass, labels may not be resolved yet:
+
+```python
+# Use placeholder for forward references
+if re.match(r'^[a-zA-Z_][a-zA-Z0-9_]*$', operand):
+    # This is likely a label
+    if current_address is not None:
+        return 254  # Force largest variant selection
+    else:
+        return 0
+```
+
+### 3.5 Operand Value Validation
+
+Before encoding, values are validated:
+
+```python
+op_mask = (1 << op_len) - 1  # Maximum unsigned value
+
+if operand_value < 0:
+    # Negative value - check signed range
+    signed_min = -(1 << (op_len - 1))
+    if operand_value < signed_min:
+        # Error: value too negative
+        
+elif operand_value > op_mask:
+    # Error: value doesn't fit in unsigned field
+```
+
+**Examples:**
+- 4-bit field: range -8 to +15 (signed) or 0 to 15 (unsigned)
+- 8-bit field: range -128 to +127 (signed) or 0 to 255 (unsigned)
+- 16-bit field: range -32768 to +32767 (signed) or 0 to 65535 (unsigned)
+
+### 3.6 Two's Complement Encoding
+
+Negative values are automatically handled via masking:
+
+```python
+encoded_operand = (operand_value & op_mask) << op_pos
+
+# Example: -5 in 4-bit field
+# operand_value = -5
+# op_mask = 0xF
+# -5 & 0xF = 0xB (binary 1011, which is -5 in two's complement)
+```
+
+---
+
+## 4. Complete Encoding Example
+
+### Scenario: `LOOP d4, for_loop_7`
+
+**Context:**
+- Current address: `0x80000030`
+- Label `for_loop_7` at: `0x800000B0`
+- Displacement: `0x80 = 128 bytes`
+
+**Available LOOP Variants:**
+1. `LOOP A[b], disp4/2` - 16-bit, 4-bit displacement (±16 bytes)
+2. `LOOP A[b], disp15/2` - 32-bit, 15-bit displacement (±32KB)
+
+### Encoding Process
+
+**Step 1: Parse instruction**
+```python
+mnemonic = "LOOP"
+operands = [ParsedOperand("d4", "reg_d"), ParsedOperand("for_loop_7", "imm")]
+```
+
+**Step 2: Find instruction**
+```python
+# find_instruction() called
+# Detects LOOP with label → selects largest variant
+definition = LOOP_32bit  # 32-bit variant selected
+```
+
+**Step 3: Calculate displacement**
+```python
+displacement_bytes = 0x800000B0 - 0x80000030 = 0x80 (128 bytes)
+
+# Apply /2 scaling (half-word addressing)
+displacement_half_words = 0x80 // 2 = 0x40 (64 half-words)
+```
+
+**Step 4: Encode operands**
+```python
+# Operand 1: d4 (register)
+op1_value = 4
+op1_pos = 12
+op1_len = 4
+binary_value |= (4 & 0xF) << 12
+
+# Operand 2: disp15 (displacement)
+op2_value = 0x40
+op2_pos = 16
+op2_len = 15
+binary_value |= (0x40 & 0x7FFF) << 16
+```
+
+**Step 5: Final result**
+```python
+opcode = 0x000000FD  # 32-bit LOOP opcode
+binary_value = 0x004040FD
+hex_value = "0x004040FD"
+```
+
+---
+
+## 5. Key Design Decisions
+
+### 5.1 Type-Based Matching
+
+**Benefit:** Enables early filtering of incompatible variants before value resolution.
+
+**Example:** MOV with 2 address registers immediately eliminates data register variants.
+
+### 5.2 Conservative Label Handling
+
+**Approach:** Use largest variant during first pass when label values unknown.
+
+**Benefit:** Ensures all forward references can be encoded; linker optimizes in second pass.
+
+### 5.3 Optimization Priority
+
+**Strategy:** Prefer smallest instruction that fits the operands.
+
+**Benefit:** Generates more compact code while maintaining correctness.
+
+### 5.4 Explicit Validation
+
+**Approach:** Validate operand values fit before encoding.
+
+**Benefit:** Clear error messages instead of silent truncation.
+
+---
+
+## 6. Error Handling
+
+The encoder provides detailed error messages with context:
+
+```python
+def _log_encoding_error(self, parsed, message, error_token_index=None, definition=None):
+    error_details = f"{message}\n"
+    error_details += f"  Instruction: {parsed.mnemonic}\n"
+    error_details += f"  Operands provided: {', '.join(operands)}\n"
+    error_details += f"  Original line: {parsed.original_line}\n"
+    
+    if definition:
+        error_details += f"  Expected syntax: {definition.syntax}\n"
+        error_details += f"  Expected operands: {definition.operand_count}\n"
+```
+
+**Example Error:**
+```
+error: Operand 2 value 0x7F does not fit in 4-bit field (max: 0xF)
+  Instruction: LOOP
+  Operands provided: d4, for_loop_7
+  Original line: loop d4, for_loop_7
+  Expected syntax: LOOP A[b], disp4/2
+  Problem token: for_loop_7:imm
+ - file: test.asm - line 68:
+```
+
+---
+
+## 7. Integration with Instruction Loader
+
+The encoder relies on `InstructionSetLoader` for:
+
+1. **Variant Lookup:** `get_instruction_variants(mnemonic)`
+2. **Instruction Matching:** `find_instruction(mnemonic, operand_count, operands)`
+3. **Operand Parsing:** `split_compound_operands(operand_str)`
+4. **Bit Field Info:** `definition.get_operand_info(operand_num)`
+
+**Data Flow:**
+```
+InstructionSetLoader (CSV/Excel/JSON)
+    ↓
+InstructionDefinition objects
+    ↓
+InstructionEncoder.encode_instruction()
+    ↓
+EncodedInstruction (binary value)
+```
+
+---
+
+## 8. Performance Considerations
+
+### 8.1 Caching
+
+- Instruction set loaded once at startup
+- Operand patterns extracted on-demand and cached in definition objects
+
+### 8.2 Early Filtering
+
+- Operand count filter eliminates most mismatches immediately
+- Type-based filtering happens before value resolution
+
+### 8.3 Optimization Scope
+
+- Only applies to specific mnemonics in `optimize_mnemonics` set
+- Skips optimization for instructions with single variant
+
+---
+
+## 9. Future Enhancements
+
+Potential areas for improvement:
+
+1. **Multi-Pass Optimization:** Second pass to optimize forward references
+2. **Relaxation:** Convert 32-bit to 16-bit when values fit
+3. **Branch Target Optimization:** Reorder code to shorten displacements
+4. **Instruction Scheduling:** Reorder independent instructions
+5. **Register Allocation:** Prefer register variants over immediate variants
+
+---
+
+## 10. Summary
+
+The instruction encoder implements a sophisticated multi-stage matching and encoding process:
+
+1. **Parse** assembly into structured operands with type tags
+2. **Normalize** operands to canonical form
+3. **Match** with instruction definitions using type and constraint filters
+4. **Optimize** variant selection based on operand values
+5. **Encode** into binary using bit field manipulation
+6. **Validate** with detailed error reporting
+
+This design balances code density, correctness, and developer experience with clear error messages and comprehensive operand format support.
