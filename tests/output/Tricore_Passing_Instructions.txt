@@ -1,0 +1,2932 @@
+# TriCore Encoder Validation - Passing Instructions
+# Format: OPCODE    SOURCE
+# Total passing: 2928
+#
+F0C2	add     d0,#-1
+E0C2	add     d0,#-2
+10C2	add     d0,#1
+0001008B	add     d0,d0,#16
+1042	add     d0,d1
+001F1A8B	add     d0,d10,#-15
+F042	add     d0,d15
+8092	add     d0,d15,#-8
+1092	add     d0,d15,#1
+00010F8B	add     d0,d15,#16
+00014F8B	add     d0,d15,#20
+5012	add     d0,d15,d5
+2042	add     d0,d2
+0000F28B	add     d0,d2,#15
+4042	add     d0,d4
+0000F48B	add     d0,d4,#15
+0001048B	add     d0,d4,#16
+0000858B	add     d0,d5,#8
+0001878B	add     d0,d7,#24
+8042	add     d0,d8
+0001C88B	add     d0,d8,#28
+0001098B	add     d0,d9,#16
+81C2	add     d1,#-8
+11C2	add     d1,#1
+21C2	add     d1,#2
+31C2	add     d1,#3
+1000808B	add     d1,d0,#8
+F142	add     d1,d15
+1192	add     d1,d15,#1
+10010F8B	add     d1,d15,#16
+2192	add     d1,d15,#2
+0112	add     d1,d15,d0
+1000230B	add     d1,d3,d2
+1001058B	add     d1,d5,#16
+1001878B	add     d1,d7,#24
+1001088B	add     d1,d8,#16
+FAC2	add     d10,#-1
+1AC2	add     d10,#1
+8A42	add     d10,d8
+FBC2	add     d11,#-1
+1BC2	add     d11,#1
+1CC2	add     d12,#1
+1DC2	add     d13,#1
+E000108B	add     d14,d0,#1
+FE42	add     d14,d15
+FFC2	add     d15,#-1
+8FC2	add     d15,#-8
+1FC2	add     d15,#1
+2FC2	add     d15,#2
+3FC2	add     d15,#3
+4FC2	add     d15,#4
+7FC2	add     d15,#7
+0F42	add     d15,d0
+F09A	add     d15,d0,#-1
+109A	add     d15,d0,#1
+F003008B	add     d15,d0,#48
+1F42	add     d15,d1
+819A	add     d15,d1,#-8
+F003018B	add     d15,d1,#48
+AF42	add     d15,d10
+FA9A	add     d15,d10,#-1
+2A9A	add     d15,d10,#2
+BF42	add     d15,d11
+FB9A	add     d15,d11,#-1
+F01F1F8B	add     d15,d15,#-15
+F0010F8B	add     d15,d15,#16
+F0014F8B	add     d15,d15,#20
+F001CF8B	add     d15,d15,#28
+F0030F8B	add     d15,d15,#48
+F0048F8B	add     d15,d15,#72
+F0008F8B	add     d15,d15,#8
+F29A	add     d15,d2,#-1
+229A	add     d15,d2,#2
+021A	add     d15,d2,d0
+321A	add     d15,d2,d3
+139A	add     d15,d3,#1
+231A	add     d15,d3,d2
+F49A	add     d15,d4,#-1
+D49A	add     d15,d4,#-3
+149A	add     d15,d4,#1
+5F42	add     d15,d5
+851A	add     d15,d5,d8
+871A	add     d15,d7,d8
+8F42	add     d15,d8
+F89A	add     d15,d8,#-1
+889A	add     d15,d8,#-8
+189A	add     d15,d8,#1
+9F42	add     d15,d9
+F99A	add     d15,d9,#-1
+F001098B	add     d15,d9,#16
+12C2	add     d2,#1
+0242	add     d2,d0
+1242	add     d2,d1
+2000810B	add     d2,d1,d8
+F242	add     d2,d15
+0212	add     d2,d15,d0
+1212	add     d2,d15,d1
+13C2	add     d3,#1
+43C2	add     d3,#4
+301FF08B	add     d3,d0,#-1
+1342	add     d3,d1
+3000410B	add     d3,d1,d4
+0312	add     d3,d15,d0
+F4C2	add     d4,#-1
+14C2	add     d4,#1
+34C2	add     d4,#3
+4000808B	add     d4,d0,#8
+F442	add     d4,d15
+F492	add     d4,d15,#-1
+4001098B	add     d4,d9,#16
+F5C2	add     d5,#-1
+C5C2	add     d5,#-4
+15C2	add     d5,#1
+5001028B	add     d5,d2,#16
+3542	add     d5,d3
+F6C2	add     d6,#-1
+16C2	add     d6,#1
+17C2	add     d7,#1
+7000450B	add     d7,d5,d4
+F8C2	add     d8,#-1
+88C2	add     d8,#-8
+18C2	add     d8,#1
+28C2	add     d8,#2
+801FF08B	add     d8,d0,#-1
+F842	add     d8,d15
+8000888B	add     d8,d8,#8
+9842	add     d8,d9
+F9C2	add     d9,#-1
+19C2	add     d9,#1
+F942	add     d9,d15
+1CB0	add.a   a12,#1
+4CB0	add.a   a12,#4
+1FB0	add.a   a15,#1
+2FB0	add.a   a15,#2
+4FB0	add.a   a15,#4
+12B0	add.a   a2,#1
+22B0	add.a   a2,#2
+42B0	add.a   a2,#4
+F330	add.a   a3,a15
+2330	add.a   a3,a2
+4330	add.a   a3,a4
+14B0	add.a   a4,#1
+24B0	add.a   a4,#2
+44B0	add.a   a4,#4
+05B0	add.a   a5,#0
+15B0	add.a   a5,#1
+25B0	add.a   a5,#2
+45B0	add.a   a5,#4
+03DCC09B	addih   d0,d0,#15820
+03FC909B	addih   d0,d0,#16329
+03FE109B	addih   d0,d0,#16353
+0404909B	addih   d0,d0,#16457
+0405309B	addih   d0,d0,#16467
+040C009B	addih   d0,d0,#16576
+040C909B	addih   d0,d0,#16585
+0457F09B	addih   d0,d0,#17791
+0497409B	addih   d0,d0,#18804
+0077309B	addih   d0,d0,#1907
+04CBE09B	addih   d0,d0,#19646
+0555509B	addih   d0,d0,#21845
+0013109B	addih   d0,d0,#305
+00BEB09B	addih   d0,d0,#3051
+07FFF09B	addih   d0,d0,#32767
+0BFC909B	addih   d0,d0,#49097
+0C04909B	addih   d0,d0,#49225
+0F00609B	addih   d0,d0,#61446
+1333319B	addih   d1,d1,#13107
+1404919B	addih   d1,d1,#16457
+140C919B	addih   d1,d1,#16585
+1468019B	addih   d1,d1,#18048
+14CBE19B	addih   d1,d1,#19646
+100FF19B	addih   d1,d1,#255
+1013119B	addih   d1,d1,#305
+10F0F19B	addih   d1,d1,#3855
+110A819B	addih   d1,d1,#4264
+1F00619B	addih   d1,d1,#61446
+F0001F9B	addih   d15,d15,#1
+F007AF9B	addih   d15,d15,#122
+F2FAFF9B	addih   d15,d15,#12207
+F3586F9B	addih   d15,d15,#13702
+F3A83F9B	addih   d15,d15,#14979
+F3DB2F9B	addih   d15,d15,#15794
+F3DCCF9B	addih   d15,d15,#15820
+F4502F9B	addih   d15,d15,#17666
+F469CF9B	addih   d15,d15,#18076
+F473EF9B	addih   d15,d15,#18238
+F47BEF9B	addih   d15,d15,#18366
+F48C3F9B	addih   d15,d15,#18627
+F0773F9B	addih   d15,d15,#1907
+F4B98F9B	addih   d15,d15,#19352
+F00FFF9B	addih   d15,d15,#255
+F7FFFF9B	addih   d15,d15,#32767
+F016EF9B	addih   d15,d15,#366
+F0E4EF9B	addih   d15,d15,#3662
+F0026F9B	addih   d15,d15,#38
+F17D7F9B	addih   d15,d15,#6103
+FF002F9B	addih   d15,d15,#61442
+FF006F9B	addih   d15,d15,#61446
+24CBE29B	addih   d2,d2,#19646
+27F7F29B	addih   d2,d2,#32639
+2F00129B	addih   d2,d2,#61441
+4385149B	addih   d4,d4,#14417
+4421C49B	addih   d4,d4,#16924
+53C7559B	addih   d5,d5,#15477
+5077359B	addih   d5,d5,#1907
+6000169B	addih   d6,d6,#1
+6409669B	addih   d6,d6,#16534
+6077369B	addih   d6,d6,#1907
+94CBE99B	addih   d9,d9,#19646
+DC10	addsc.a a12,a13,d15,#0
+2C10	addsc.a a12,a2,d15,#0
+4C10	addsc.a a12,a4,d15,#0
+4D10	addsc.a a13,a4,d15,#0
+AF10	addsc.a a15,a10,d15,#0
+F600A201	addsc.a a15,a10,d2,#0
+CF10	addsc.a a15,a12,d15,#0
+DF10	addsc.a a15,a13,d15,#0
+F600F001	addsc.a a15,a15,d0,#0
+FF10	addsc.a a15,a15,d15,#0
+F600F701	addsc.a a15,a15,d7,#0
+F600F801	addsc.a a15,a15,d8,#0
+F600F901	addsc.a a15,a15,d9,#0
+F6032101	addsc.a a15,a2,d1,#3
+2F10	addsc.a a15,a2,d15,#0
+F6004101	addsc.a a15,a4,d1,#0
+4F10	addsc.a a15,a4,d15,#0
+5F10	addsc.a a15,a5,d15,#0
+F6006101	addsc.a a15,a6,d1,#0
+A210	addsc.a a2,a10,d15,#0
+2600C001	addsc.a a2,a12,d0,#0
+C210	addsc.a a2,a12,d15,#0
+2600C901	addsc.a a2,a12,d9,#0
+2600D101	addsc.a a2,a13,d1,#0
+D210	addsc.a a2,a13,d15,#0
+E210	addsc.a a2,a14,d15,#0
+2600E201	addsc.a a2,a14,d2,#0
+2600F001	addsc.a a2,a15,d0,#0
+2600F101	addsc.a a2,a15,d1,#0
+2600FA01	addsc.a a2,a15,d10,#0
+F210	addsc.a a2,a15,d15,#0
+2600F901	addsc.a a2,a15,d9,#0
+26002001	addsc.a a2,a2,d0,#0
+26002C01	addsc.a a2,a2,d12,#0
+2210	addsc.a a2,a2,d15,#0
+26002501	addsc.a a2,a2,d5,#0
+26002801	addsc.a a2,a2,d8,#0
+26004101	addsc.a a2,a4,d1,#0
+4210	addsc.a a2,a4,d15,#0
+5210	addsc.a a2,a5,d15,#0
+C410	addsc.a a4,a12,d15,#0
+4600C901	addsc.a a4,a12,d9,#0
+D410	addsc.a a4,a13,d15,#0
+E410	addsc.a a4,a14,d15,#0
+4600F001	addsc.a a4,a15,d0,#0
+4600FA01	addsc.a a4,a15,d10,#0
+F410	addsc.a a4,a15,d15,#0
+4600F901	addsc.a a4,a15,d9,#0
+2410	addsc.a a4,a2,d15,#0
+4410	addsc.a a4,a4,d15,#0
+5600CA01	addsc.a a5,a12,d10,#0
+C510	addsc.a a5,a12,d15,#0
+E510	addsc.a a5,a14,d15,#0
+F510	addsc.a a5,a15,d15,#0
+56002001	addsc.a a5,a2,d0,#0
+2510	addsc.a a5,a2,d15,#0
+4510	addsc.a a5,a4,d15,#0
+5510	addsc.a a5,a5,d15,#0
+2610	addsc.a a6,a2,d15,#0
+76007301	addsc.a a7,a7,d3,#0
+76007501	addsc.a a7,a7,d5,#0
+1026	and     d0,d1
+F026	and     d0,d15
+0100FF8F	and     d0,d15,#15
+01003F8F	and     d0,d15,#3
+0101FF8F	and     d0,d15,#31
+2026	and     d0,d2
+4026	and     d0,d4
+010FF48F	and     d0,d4,#255
+8026	and     d0,d8
+0126	and     d1,d0
+F126	and     d1,d15
+2126	and     d1,d2
+3126	and     d1,d3
+5126	and     d1,d5
+1080F90F	and     d1,d9,d15
+A101FF8F	and     d10,d15,#31
+C101FF8F	and     d12,d15,#31
+0116	and     d15,#1
+7F16	and     d15,#127
+8016	and     d15,#128
+0F16	and     d15,#15
+FF16	and     d15,#255
+0316	and     d15,#3
+1F16	and     d15,#31
+0616	and     d15,#6
+0716	and     d15,#7
+0F26	and     d15,d0
+1F26	and     d15,d1
+F1001A8F	and     d15,d10,#1
+F1003A8F	and     d15,d10,#3
+2F26	and     d15,d2
+3F26	and     d15,d3
+F100738F	and     d15,d3,#7
+F100838F	and     d15,d3,#8
+4F26	and     d15,d4
+F10FF48F	and     d15,d4,#255
+F101F48F	and     d15,d4,#31
+F11FF48F	and     d15,d4,#511
+F080040F	and     d15,d4,d0
+6F26	and     d15,d6
+F100168F	and     d15,d6,#1
+7F26	and     d15,d7
+F100378F	and     d15,d7,#3
+F100388F	and     d15,d8,#3
+F101F88F	and     d15,d8,#31
+F100788F	and     d15,d8,#7
+9F26	and     d15,d9
+F100798F	and     d15,d9,#7
+F080B90F	and     d15,d9,d11
+0226	and     d2,d0
+2080400F	and     d2,d0,d4
+1226	and     d2,d1
+F226	and     d2,d15
+21001F8F	and     d2,d15,#1
+21015F8F	and     d2,d15,#21
+21007F8F	and     d2,d15,#7
+3226	and     d2,d3
+4226	and     d2,d4
+2080F40F	and     d2,d4,d15
+8226	and     d2,d8
+2080F90F	and     d2,d9,d15
+3080510F	and     d3,d1,d5
+31007F8F	and     d3,d15,#7
+5326	and     d3,d5
+9326	and     d3,d9
+0426	and     d4,d0
+B426	and     d4,d11
+5426	and     d4,d5
+F626	and     d6,d15
+A826	and     d8,d10
+B826	and     d8,d11
+F826	and     d8,d15
+810FFF8F	and     d8,d15,#255
+810FF48F	and     d8,d4,#255
+B926	and     d9,d11
+910FF48F	and     d9,d4,#255
+0051104B	div.f   d0,d0,d1
+0051404B	div.f   d0,d0,d4
+0051904B	div.f   d0,d0,d9
+0051F14B	div.f   d0,d1,d15
+00510F4B	div.f   d0,d15,d0
+00511F4B	div.f   d0,d15,d1
+0051024B	div.f   d0,d2,d0
+0051524B	div.f   d0,d2,d5
+0051824B	div.f   d0,d2,d8
+0051F94B	div.f   d0,d9,d15
+10512F4B	div.f   d1,d15,d2
+1051124B	div.f   d1,d2,d1
+1051134B	div.f   d1,d3,d1
+C051FA4B	div.f   d12,d10,d15
+F051A04B	div.f   d15,d0,d10
+F051F04B	div.f   d15,d0,d15
+F051F14B	div.f   d15,d1,d15
+F051FA4B	div.f   d15,d10,d15
+F0510F4B	div.f   d15,d15,d0
+F0511F4B	div.f   d15,d15,d1
+F0512F4B	div.f   d15,d15,d2
+F0514F4B	div.f   d15,d15,d4
+F0515F4B	div.f   d15,d15,d5
+F0518F4B	div.f   d15,d15,d8
+F051F24B	div.f   d15,d2,d15
+F051824B	div.f   d15,d2,d8
+F051F44B	div.f   d15,d4,d15
+F051544B	div.f   d15,d4,d5
+F051F54B	div.f   d15,d5,d15
+F051454B	div.f   d15,d5,d4
+2051F04B	div.f   d2,d0,d15
+2051F14B	div.f   d2,d1,d15
+2051FB4B	div.f   d2,d11,d15
+20510F4B	div.f   d2,d15,d0
+20519F4B	div.f   d2,d15,d9
+2051F24B	div.f   d2,d2,d15
+2051034B	div.f   d2,d3,d0
+2051F94B	div.f   d2,d9,d15
+40518B4B	div.f   d4,d11,d8
+40510F4B	div.f   d4,d15,d0
+4051F24B	div.f   d4,d2,d15
+4051F94B	div.f   d4,d9,d15
+80510F4B	div.f   d8,d15,d0
+0100100B	eq      d0,d0,d1
+B2000F8B	eq      d11,d15,#0
+403A	eq      d15,d0,d4
+0A3A	eq      d15,d10,d0
+0FBA	eq      d15,d15,#0
+1F3A	eq      d15,d15,d1
+02BA	eq      d15,d2,#0
+083A	eq      d15,d8,d0
+22000F8B	eq      d2,d15,#0
+22001F8B	eq      d2,d15,#1
+22003F8B	eq      d2,d15,#3
+21000F0B	eq      d2,d15,d0
+2200028B	eq      d2,d2,#0
+2200088B	eq      d2,d8,#0
+92000F8B	eq      d9,d15,#0
+006C0037	extr.u  d0,d0,#0,#12
+00700037	extr.u  d0,d0,#0,#16
+00780037	extr.u  d0,d0,#0,#24
+00680037	extr.u  d0,d0,#0,#8
+07E10037	extr.u  d0,d0,#15,#1
+08700037	extr.u  d0,d0,#16,#16
+016E0037	extr.u  d0,d0,#2,#14
+00660137	extr.u  d0,d1,#0,#6
+056A0137	extr.u  d0,d1,#10,#10
+00700A37	extr.u  d0,d10,#0,#16
+00700B37	extr.u  d0,d11,#0,#16
+006A0C37	extr.u  d0,d12,#0,#10
+00700C37	extr.u  d0,d12,#0,#16
+0A6A0C37	extr.u  d0,d12,#20,#10
+006A0D37	extr.u  d0,d13,#0,#10
+00700D37	extr.u  d0,d13,#0,#16
+00700F37	extr.u  d0,d15,#0,#16
+007F0F37	extr.u  d0,d15,#0,#31
+00680F37	extr.u  d0,d15,#0,#8
+08700F37	extr.u  d0,d15,#16,#16
+01640F37	extr.u  d0,d15,#2,#4
+0C680F37	extr.u  d0,d15,#24,#8
+02640F37	extr.u  d0,d15,#4,#4
+02E20F37	extr.u  d0,d15,#5,#2
+04680F37	extr.u  d0,d15,#8,#8
+006A0237	extr.u  d0,d2,#0,#10
+00660237	extr.u  d0,d2,#0,#6
+056A0237	extr.u  d0,d2,#10,#10
+006A0337	extr.u  d0,d3,#0,#10
+08680337	extr.u  d0,d3,#16,#8
+0A6A0337	extr.u  d0,d3,#20,#10
+00680437	extr.u  d0,d4,#0,#8
+006A0537	extr.u  d0,d5,#0,#10
+006D0537	extr.u  d0,d5,#0,#13
+006A0637	extr.u  d0,d6,#0,#10
+056A0637	extr.u  d0,d6,#10,#10
+006A0837	extr.u  d0,d8,#0,#10
+00700837	extr.u  d0,d8,#0,#16
+00680837	extr.u  d0,d8,#0,#8
+00700937	extr.u  d0,d9,#0,#16
+00680937	extr.u  d0,d9,#0,#8
+08700937	extr.u  d0,d9,#16,#16
+10680037	extr.u  d1,d0,#0,#8
+116E0037	extr.u  d1,d0,#2,#14
+1C680037	extr.u  d1,d0,#24,#8
+12F30037	extr.u  d1,d0,#5,#19
+17E10137	extr.u  d1,d1,#15,#1
+10630F37	extr.u  d1,d15,#0,#3
+10700837	extr.u  d1,d8,#0,#16
+A0700037	extr.u  d10,d0,#0,#16
+A1E10F37	extr.u  d10,d15,#3,#1
+B1E10F37	extr.u  d11,d15,#3,#1
+C0680C37	extr.u  d12,d12,#0,#8
+F0700037	extr.u  d15,d0,#0,#16
+F07F0037	extr.u  d15,d0,#0,#31
+F8640037	extr.u  d15,d0,#16,#4
+F1610037	extr.u  d15,d0,#2,#1
+FC660037	extr.u  d15,d0,#24,#6
+FFE10037	extr.u  d15,d0,#31,#1
+F2E10037	extr.u  d15,d0,#5,#1
+F3E10037	extr.u  d15,d0,#7,#1
+FF610057	extr.u  d15,d0,d15,#1
+F0610137	extr.u  d15,d1,#0,#1
+F0620137	extr.u  d15,d1,#0,#2
+F0E20137	extr.u  d15,d1,#1,#2
+F5610137	extr.u  d15,d1,#10,#1
+F5E10137	extr.u  d15,d1,#11,#1
+F6640137	extr.u  d15,d1,#12,#4
+F8640137	extr.u  d15,d1,#16,#4
+FA610137	extr.u  d15,d1,#20,#1
+FAE10137	extr.u  d15,d1,#21,#1
+FC680137	extr.u  d15,d1,#24,#8
+F2620137	extr.u  d15,d1,#4,#2
+F3620137	extr.u  d15,d1,#6,#2
+F4620137	extr.u  d15,d1,#8,#2
+F0700A37	extr.u  d15,d10,#0,#16
+F8700A37	extr.u  d15,d10,#16,#16
+F0700B37	extr.u  d15,d11,#0,#16
+F0700C37	extr.u  d15,d12,#0,#16
+F8700C37	extr.u  d15,d12,#16,#16
+FA6A0C37	extr.u  d15,d12,#20,#10
+F0700D37	extr.u  d15,d13,#0,#16
+F0610F37	extr.u  d15,d15,#0,#1
+F06C0F37	extr.u  d15,d15,#0,#12
+F0700F37	extr.u  d15,d15,#0,#16
+F0780F37	extr.u  d15,d15,#0,#24
+F0680F37	extr.u  d15,d15,#0,#8
+F0E10F37	extr.u  d15,d15,#1,#1
+F0E30F37	extr.u  d15,d15,#1,#3
+F0E50F37	extr.u  d15,d15,#1,#5
+F0E70F37	extr.u  d15,d15,#1,#7
+F7E10F37	extr.u  d15,d15,#15,#1
+F8700F37	extr.u  d15,d15,#16,#16
+F1610F37	extr.u  d15,d15,#2,#1
+F16E0F37	extr.u  d15,d15,#2,#14
+F1620F37	extr.u  d15,d15,#2,#2
+F1640F37	extr.u  d15,d15,#2,#4
+FB6A0F37	extr.u  d15,d15,#22,#10
+FB620F37	extr.u  d15,d15,#22,#2
+FBE80F37	extr.u  d15,d15,#23,#8
+F1E10F37	extr.u  d15,d15,#3,#1
+F1E20F37	extr.u  d15,d15,#3,#2
+F1E30F37	extr.u  d15,d15,#3,#3
+FFE10F37	extr.u  d15,d15,#31,#1
+F2610F37	extr.u  d15,d15,#4,#1
+F2620F37	extr.u  d15,d15,#4,#2
+F2640F37	extr.u  d15,d15,#4,#4
+F2650F37	extr.u  d15,d15,#4,#5
+F2E10F37	extr.u  d15,d15,#5,#1
+F3610F37	extr.u  d15,d15,#6,#1
+F3620F37	extr.u  d15,d15,#6,#2
+F3640F37	extr.u  d15,d15,#6,#4
+F3E10F37	extr.u  d15,d15,#7,#1
+F46E0F37	extr.u  d15,d15,#8,#14
+F0610F57	extr.u  d15,d15,d0,#1
+F0620F57	extr.u  d15,d15,d0,#2
+F06A0237	extr.u  d15,d2,#0,#10
+FA6A0237	extr.u  d15,d2,#20,#10
+F06A0337	extr.u  d15,d3,#0,#10
+FA6A0337	extr.u  d15,d3,#20,#10
+F4680337	extr.u  d15,d3,#8,#8
+F0680437	extr.u  d15,d4,#0,#8
+FBE80437	extr.u  d15,d4,#23,#8
+F8680457	extr.u  d15,d4,d8,#8
+F6E30537	extr.u  d15,d5,#13,#3
+F06A0637	extr.u  d15,d6,#0,#10
+FA6A0637	extr.u  d15,d6,#20,#10
+F06A0837	extr.u  d15,d8,#0,#10
+F0700837	extr.u  d15,d8,#0,#16
+F0640837	extr.u  d15,d8,#0,#4
+F0680837	extr.u  d15,d8,#0,#8
+F7620837	extr.u  d15,d8,#14,#2
+FA620837	extr.u  d15,d8,#20,#2
+FC620837	extr.u  d15,d8,#24,#2
+F2640837	extr.u  d15,d8,#4,#4
+F4640837	extr.u  d15,d8,#8,#4
+F0700937	extr.u  d15,d9,#0,#16
+20700037	extr.u  d2,d0,#0,#16
+20680037	extr.u  d2,d0,#0,#8
+20700F37	extr.u  d2,d15,#0,#16
+20680F37	extr.u  d2,d15,#0,#8
+20E10F37	extr.u  d2,d15,#1,#1
+26630F37	extr.u  d2,d15,#12,#3
+28E20F37	extr.u  d2,d15,#17,#2
+2C630F37	extr.u  d2,d15,#24,#3
+2E630F37	extr.u  d2,d15,#28,#3
+22E10F37	extr.u  d2,d15,#5,#1
+20680237	extr.u  d2,d2,#0,#8
+40680037	extr.u  d4,d0,#0,#8
+40680A37	extr.u  d4,d10,#0,#8
+40680F37	extr.u  d4,d15,#0,#8
+40E30F37	extr.u  d4,d15,#1,#3
+41640F37	extr.u  d4,d15,#2,#4
+50700037	extr.u  d5,d0,#0,#16
+50680037	extr.u  d5,d0,#0,#8
+50700F37	extr.u  d5,d15,#0,#16
+50680F37	extr.u  d5,d15,#0,#8
+50680437	extr.u  d5,d4,#0,#8
+81640057	extr.u  d8,d0,d1,#4
+8F640057	extr.u  d8,d0,d15,#4
+80700F37	extr.u  d8,d15,#0,#16
+80640F57	extr.u  d8,d15,d0,#4
+80700837	extr.u  d8,d8,#0,#16
+000100B7	insert  d0,d0,#0,#0,#1
+000200B7	insert  d0,d0,#0,#0,#2
+061400B7	insert  d0,d0,#0,#12,#20
+0F8100B7	insert  d0,d0,#0,#31,#1
+028200B7	insert  d0,d0,#0,#5,#2
+030200B7	insert  d0,d0,#0,#6,#2
+030210B7	insert  d0,d0,#1,#6,#2
+010220B7	insert  d0,d0,#2,#2,#2
+00031037	insert  d0,d0,d1,#0,#3
+08101037	insert  d0,d0,d1,#16,#16
+0001F037	insert  d0,d0,d15,#0,#1
+0003F037	insert  d0,d0,d15,#0,#3
+0005F037	insert  d0,d0,d15,#0,#5
+0006F037	insert  d0,d0,d15,#0,#6
+0081F037	insert  d0,d0,d15,#1,#1
+0801F037	insert  d0,d0,d15,#16,#1
+0805F037	insert  d0,d0,d15,#16,#5
+0881F037	insert  d0,d0,d15,#17,#1
+0901F037	insert  d0,d0,d15,#18,#1
+0981F037	insert  d0,d0,d15,#19,#1
+0101F037	insert  d0,d0,d15,#2,#1
+0104F037	insert  d0,d0,d15,#2,#4
+0A01F037	insert  d0,d0,d15,#20,#1
+0A81F037	insert  d0,d0,d15,#21,#1
+0B01F037	insert  d0,d0,d15,#22,#1
+0C01F037	insert  d0,d0,d15,#24,#1
+0C04F037	insert  d0,d0,d15,#24,#4
+0C05F037	insert  d0,d0,d15,#24,#5
+0C81F037	insert  d0,d0,d15,#25,#1
+0D01F037	insert  d0,d0,d15,#26,#1
+0E01F037	insert  d0,d0,d15,#28,#1
+0E02F037	insert  d0,d0,d15,#28,#2
+0181F037	insert  d0,d0,d15,#3,#1
+0F01F037	insert  d0,d0,d15,#30,#1
+0381F037	insert  d0,d0,d15,#7,#1
+0405F037	insert  d0,d0,d15,#8,#5
+01017037	insert  d0,d0,d7,#2,#1
+03017037	insert  d0,d0,d7,#6,#1
+00048037	insert  d0,d0,d8,#0,#4
+00100137	insert  d0,d1,d0,#0,#16
+00020137	insert  d0,d1,d0,#0,#2
+00040137	insert  d0,d1,d0,#0,#4
+01810137	insert  d0,d1,d0,#3,#1
+00180AB7	insert  d0,d10,#0,#0,#24
+00810FB7	insert  d0,d15,#0,#1,#1
+010E0F37	insert  d0,d15,d0,#2,#14
+000104B7	insert  d0,d4,#0,#0,#1
+000204B7	insert  d0,d4,#0,#0,#2
+10030137	insert  d1,d1,d0,#0,#3
+10060137	insert  d1,d1,d0,#0,#6
+10810137	insert  d1,d1,d0,#1,#1
+16040137	insert  d1,d1,d0,#12,#4
+16810137	insert  d1,d1,d0,#13,#1
+17010137	insert  d1,d1,d0,#14,#1
+17810137	insert  d1,d1,d0,#15,#1
+18040137	insert  d1,d1,d0,#16,#4
+1A010137	insert  d1,d1,d0,#20,#1
+1A810137	insert  d1,d1,d0,#21,#1
+1B010137	insert  d1,d1,d0,#22,#1
+1C010137	insert  d1,d1,d0,#24,#1
+1C810137	insert  d1,d1,d0,#25,#1
+1D020137	insert  d1,d1,d0,#26,#2
+11810137	insert  d1,d1,d0,#3,#1
+12030137	insert  d1,d1,d0,#4,#3
+13810137	insert  d1,d1,d0,#7,#1
+14010137	insert  d1,d1,d0,#8,#1
+14040137	insert  d1,d1,d0,#8,#4
+14810137	insert  d1,d1,d0,#9,#1
+1001F137	insert  d1,d1,d15,#0,#1
+1006F137	insert  d1,d1,d15,#0,#6
+1081F137	insert  d1,d1,d15,#1,#1
+1682F137	insert  d1,d1,d15,#13,#2
+1804F137	insert  d1,d1,d15,#16,#4
+1101F137	insert  d1,d1,d15,#2,#1
+1B81F137	insert  d1,d1,d15,#23,#1
+1E04F137	insert  d1,d1,d15,#28,#4
+1281F137	insert  d1,d1,d15,#5,#1
+1301F137	insert  d1,d1,d15,#6,#1
+1381F137	insert  d1,d1,d15,#7,#1
+17812137	insert  d1,d1,d2,#15,#1
+1B812137	insert  d1,d1,d2,#23,#1
+A0100A37	insert  d10,d10,d0,#0,#16
+A001FA37	insert  d10,d10,d15,#0,#1
+A081FA37	insert  d10,d10,d15,#1,#1
+A810FA37	insert  d10,d10,d15,#16,#16
+A881FA37	insert  d10,d10,d15,#17,#1
+A901FA37	insert  d10,d10,d15,#18,#1
+A981FA37	insert  d10,d10,d15,#19,#1
+A101FA37	insert  d10,d10,d15,#2,#1
+AA01FA37	insert  d10,d10,d15,#20,#1
+AA81FA37	insert  d10,d10,d15,#21,#1
+AB01FA37	insert  d10,d10,d15,#22,#1
+AB81FA37	insert  d10,d10,d15,#23,#1
+AC01FA37	insert  d10,d10,d15,#24,#1
+AC81FA37	insert  d10,d10,d15,#25,#1
+AD01FA37	insert  d10,d10,d15,#26,#1
+A181FA37	insert  d10,d10,d15,#3,#1
+AF01FA37	insert  d10,d10,d15,#30,#1
+B010FB37	insert  d11,d11,d15,#0,#16
+C0100C37	insert  d12,d12,d0,#0,#16
+C810FC37	insert  d12,d12,d15,#16,#16
+D00AFD37	insert  d13,d13,d15,#0,#10
+D010FD37	insert  d13,d13,d15,#0,#16
+F00C1037	insert  d15,d0,d1,#0,#12
+F10E1037	insert  d15,d0,d1,#2,#14
+F204A037	insert  d15,d0,d10,#4,#4
+F001F037	insert  d15,d0,d15,#0,#1
+F00AF037	insert  d15,d0,d15,#0,#10
+F00CF037	insert  d15,d0,d15,#0,#12
+F010F037	insert  d15,d0,d15,#0,#16
+F002F037	insert  d15,d0,d15,#0,#2
+F003F037	insert  d15,d0,d15,#0,#3
+F004F037	insert  d15,d0,d15,#0,#4
+F005F037	insert  d15,d0,d15,#0,#5
+F006F037	insert  d15,d0,d15,#0,#6
+F007F037	insert  d15,d0,d15,#0,#7
+F008F037	insert  d15,d0,d15,#0,#8
+F081F037	insert  d15,d0,d15,#1,#1
+F083F037	insert  d15,d0,d15,#1,#3
+F085F037	insert  d15,d0,d15,#1,#5
+F087F037	insert  d15,d0,d15,#1,#7
+F581F037	insert  d15,d0,d15,#11,#1
+F101F037	insert  d15,d0,d15,#2,#1
+F103F037	insert  d15,d0,d15,#2,#3
+FC01F037	insert  d15,d0,d15,#24,#1
+FD01F037	insert  d15,d0,d15,#26,#1
+FD81F037	insert  d15,d0,d15,#27,#1
+FE01F037	insert  d15,d0,d15,#28,#1
+FE81F037	insert  d15,d0,d15,#29,#1
+F181F037	insert  d15,d0,d15,#3,#1
+F201F037	insert  d15,d0,d15,#4,#1
+F202F037	insert  d15,d0,d15,#4,#2
+F203F037	insert  d15,d0,d15,#4,#3
+F281F037	insert  d15,d0,d15,#5,#1
+F282F037	insert  d15,d0,d15,#5,#2
+F301F037	insert  d15,d0,d15,#6,#1
+F302F037	insert  d15,d0,d15,#6,#2
+F303F037	insert  d15,d0,d15,#6,#3
+F306F037	insert  d15,d0,d15,#6,#6
+F381F037	insert  d15,d0,d15,#7,#1
+F008F137	insert  d15,d1,d15,#0,#8
+F081F137	insert  d15,d1,d15,#1,#1
+F083F137	insert  d15,d1,d15,#1,#3
+F101F137	insert  d15,d1,d15,#2,#1
+F181F137	insert  d15,d1,d15,#3,#1
+F202F137	insert  d15,d1,d15,#4,#2
+F0010FB7	insert  d15,d15,#0,#0,#1
+F0100FB7	insert  d15,d15,#0,#0,#16
+F0140FB7	insert  d15,d15,#0,#0,#20
+F01C0FB7	insert  d15,d15,#0,#0,#28
+F0030FB7	insert  d15,d15,#0,#0,#3
+F0060FB7	insert  d15,d15,#0,#0,#6
+F0080FB7	insert  d15,d15,#0,#0,#8
+F0810FB7	insert  d15,d15,#0,#1,#1
+F08F0FB7	insert  d15,d15,#0,#1,#15
+F0870FB7	insert  d15,d15,#0,#1,#7
+F8100FB7	insert  d15,d15,#0,#16,#16
+F1010FB7	insert  d15,d15,#0,#2,#1
+F1020FB7	insert  d15,d15,#0,#2,#2
+F1060FB7	insert  d15,d15,#0,#2,#6
+FA0C0FB7	insert  d15,d15,#0,#20,#12
+F1810FB7	insert  d15,d15,#0,#3,#1
+F1830FB7	insert  d15,d15,#0,#3,#3
+F2010FB7	insert  d15,d15,#0,#4,#1
+F2020FB7	insert  d15,d15,#0,#4,#2
+F2810FB7	insert  d15,d15,#0,#5,#1
+F2850FB7	insert  d15,d15,#0,#5,#5
+F3010FB7	insert  d15,d15,#0,#6,#1
+F3040FB7	insert  d15,d15,#0,#6,#4
+F3810FB7	insert  d15,d15,#0,#7,#1
+F0031FB7	insert  d15,d15,#1,#0,#3
+F0081FB7	insert  d15,d15,#1,#0,#8
+F1021FB7	insert  d15,d15,#1,#2,#2
+F1831FB7	insert  d15,d15,#1,#3,#3
+FF011FB7	insert  d15,d15,#1,#30,#1
+F2021FB7	insert  d15,d15,#1,#4,#2
+F3021FB7	insert  d15,d15,#1,#6,#2
+F0022FB7	insert  d15,d15,#2,#0,#2
+F0032FB7	insert  d15,d15,#2,#0,#3
+F0082FB7	insert  d15,d15,#2,#0,#8
+F0822FB7	insert  d15,d15,#2,#1,#2
+F5022FB7	insert  d15,d15,#2,#10,#2
+F1022FB7	insert  d15,d15,#2,#2,#2
+F2022FB7	insert  d15,d15,#2,#4,#2
+F3022FB7	insert  d15,d15,#2,#6,#2
+F0033FB7	insert  d15,d15,#3,#0,#3
+F0043FB7	insert  d15,d15,#3,#0,#4
+F0073FB7	insert  d15,d15,#3,#0,#7
+F0083FB7	insert  d15,d15,#3,#0,#8
+F0034FB7	insert  d15,d15,#4,#0,#3
+F0044FB7	insert  d15,d15,#4,#0,#4
+F0084FB7	insert  d15,d15,#4,#0,#8
+F0834FB7	insert  d15,d15,#4,#1,#3
+F0085FB7	insert  d15,d15,#5,#0,#8
+F0835FB7	insert  d15,d15,#5,#1,#3
+F0086FB7	insert  d15,d15,#6,#0,#8
+F0836FB7	insert  d15,d15,#6,#1,#3
+F0087FB7	insert  d15,d15,#7,#0,#8
+FE037FB7	insert  d15,d15,#7,#28,#3
+F0010F37	insert  d15,d15,d0,#0,#1
+F00A0F37	insert  d15,d15,d0,#0,#10
+F00C0F37	insert  d15,d15,d0,#0,#12
+F00E0F37	insert  d15,d15,d0,#0,#14
+F0020F37	insert  d15,d15,d0,#0,#2
+F0030F37	insert  d15,d15,d0,#0,#3
+F0040F37	insert  d15,d15,d0,#0,#4
+F0050F37	insert  d15,d15,d0,#0,#5
+F0060F37	insert  d15,d15,d0,#0,#6
+F0080F37	insert  d15,d15,d0,#0,#8
+F0810F37	insert  d15,d15,d0,#1,#1
+F5010F37	insert  d15,d15,d0,#10,#1
+F5810F37	insert  d15,d15,d0,#11,#1
+F6810F37	insert  d15,d15,d0,#13,#1
+F7010F37	insert  d15,d15,d0,#14,#1
+F7810F37	insert  d15,d15,d0,#15,#1
+F8100F37	insert  d15,d15,d0,#16,#16
+F8030F37	insert  d15,d15,d0,#16,#3
+F8040F37	insert  d15,d15,d0,#16,#4
+F9010F37	insert  d15,d15,d0,#18,#1
+F9810F37	insert  d15,d15,d0,#19,#1
+F1010F37	insert  d15,d15,d0,#2,#1
+F1020F37	insert  d15,d15,d0,#2,#2
+FA010F37	insert  d15,d15,d0,#20,#1
+FA830F37	insert  d15,d15,d0,#21,#3
+FB010F37	insert  d15,d15,d0,#22,#1
+FC010F37	insert  d15,d15,d0,#24,#1
+FC030F37	insert  d15,d15,d0,#24,#3
+FC810F37	insert  d15,d15,d0,#25,#1
+FD010F37	insert  d15,d15,d0,#26,#1
+FE010F37	insert  d15,d15,d0,#28,#1
+FE810F37	insert  d15,d15,d0,#29,#1
+F1810F37	insert  d15,d15,d0,#3,#1
+F1820F37	insert  d15,d15,d0,#3,#2
+F1830F37	insert  d15,d15,d0,#3,#3
+FF010F37	insert  d15,d15,d0,#30,#1
+FF810F37	insert  d15,d15,d0,#31,#1
+F2010F37	insert  d15,d15,d0,#4,#1
+F2020F37	insert  d15,d15,d0,#4,#2
+F2040F37	insert  d15,d15,d0,#4,#4
+F2810F37	insert  d15,d15,d0,#5,#1
+F2820F37	insert  d15,d15,d0,#5,#2
+F3020F37	insert  d15,d15,d0,#6,#2
+F3040F37	insert  d15,d15,d0,#6,#4
+F3810F37	insert  d15,d15,d0,#7,#1
+F4010F37	insert  d15,d15,d0,#8,#1
+F4020F37	insert  d15,d15,d0,#8,#2
+F4040F37	insert  d15,d15,d0,#8,#4
+F4080F37	insert  d15,d15,d0,#8,#8
+F4810F37	insert  d15,d15,d0,#9,#1
+F5811F37	insert  d15,d15,d1,#11,#1
+F001AF37	insert  d15,d15,d10,#0,#1
+F00CAF37	insert  d15,d15,d10,#0,#12
+F002AF37	insert  d15,d15,d10,#0,#2
+F018AF37	insert  d15,d15,d10,#0,#24
+F181AF37	insert  d15,d15,d10,#3,#1
+F201AF37	insert  d15,d15,d10,#4,#1
+F381AF37	insert  d15,d15,d10,#7,#1
+F018BF37	insert  d15,d15,d11,#0,#24
+F004BF37	insert  d15,d15,d11,#0,#4
+F181BF37	insert  d15,d15,d11,#3,#1
+F018CF37	insert  d15,d15,d12,#0,#24
+F003CF37	insert  d15,d15,d12,#0,#3
+F182CF37	insert  d15,d15,d12,#3,#2
+FB0ADF37	insert  d15,d15,d13,#22,#10
+F1042F37	insert  d15,d15,d2,#2,#4
+F0023F37	insert  d15,d15,d3,#0,#2
+F0024F37	insert  d15,d15,d4,#0,#2
+F0054F37	insert  d15,d15,d4,#0,#5
+F09F4F37	insert  d15,d15,d4,#1,#31
+F7014F37	insert  d15,d15,d4,#14,#1
+F10E4F37	insert  d15,d15,d4,#2,#14
+FC034F37	insert  d15,d15,d4,#24,#3
+FC824F37	insert  d15,d15,d4,#25,#2
+F0105F37	insert  d15,d15,d5,#0,#16
+F0025F37	insert  d15,d15,d5,#0,#2
+F0185F37	insert  d15,d15,d5,#0,#24
+F0065F37	insert  d15,d15,d5,#0,#6
+F0095F37	insert  d15,d15,d5,#0,#9
+F0815F37	insert  d15,d15,d5,#1,#1
+F6035F37	insert  d15,d15,d5,#12,#3
+F8105F37	insert  d15,d15,d5,#16,#16
+F8095F37	insert  d15,d15,d5,#16,#9
+F10E5F37	insert  d15,d15,d5,#2,#14
+F1025F37	insert  d15,d15,d5,#2,#2
+FA015F37	insert  d15,d15,d5,#20,#1
+FC015F37	insert  d15,d15,d5,#24,#1
+FC055F37	insert  d15,d15,d5,#24,#5
+F1815F37	insert  d15,d15,d5,#3,#1
+F2025F37	insert  d15,d15,d5,#4,#2
+F2035F37	insert  d15,d15,d5,#4,#3
+F3025F37	insert  d15,d15,d5,#6,#2
+F3035F37	insert  d15,d15,d5,#6,#3
+F3815F37	insert  d15,d15,d5,#7,#1
+F4055F37	insert  d15,d15,d5,#8,#5
+F0056F37	insert  d15,d15,d6,#0,#5
+F8056F37	insert  d15,d15,d6,#16,#5
+FA017F37	insert  d15,d15,d7,#20,#1
+F0018F37	insert  d15,d15,d8,#0,#1
+F0188F37	insert  d15,d15,d8,#0,#24
+F00C9F37	insert  d15,d15,d9,#0,#12
+F0819F37	insert  d15,d15,d9,#1,#1
+F1829F37	insert  d15,d15,d9,#3,#2
+F00104B7	insert  d15,d4,#0,#0,#1
+F00204B7	insert  d15,d4,#0,#0,#2
+F01804B7	insert  d15,d4,#0,#0,#24
+F61404B7	insert  d15,d4,#0,#12,#20
+2E8230B7	insert  d2,d0,#3,#29,#2
+2E0370B7	insert  d2,d0,#7,#28,#3
+250A0137	insert  d2,d1,d0,#10,#10
+20100FB7	insert  d2,d15,#0,#0,#16
+26140FB7	insert  d2,d15,#0,#12,#20
+28100FB7	insert  d2,d15,#0,#16,#16
+250A02B7	insert  d2,d2,#0,#10,#10
+20060237	insert  d2,d2,d0,#0,#6
+23010237	insert  d2,d2,d0,#6,#1
+27011237	insert  d2,d2,d1,#14,#1
+2001F237	insert  d2,d2,d15,#0,#1
+200AF237	insert  d2,d2,d15,#0,#10
+2010F237	insert  d2,d2,d15,#0,#16
+2006F237	insert  d2,d2,d15,#0,#6
+2804F237	insert  d2,d2,d15,#16,#4
+2101F237	insert  d2,d2,d15,#2,#1
+2A05F237	insert  d2,d2,d15,#20,#5
+2C83F237	insert  d2,d2,d15,#25,#3
+2E02F237	insert  d2,d2,d15,#28,#2
+2181F237	insert  d2,d2,d15,#3,#1
+2F01F237	insert  d2,d2,d15,#30,#1
+2F81F237	insert  d2,d2,d15,#31,#1
+2281F237	insert  d2,d2,d15,#5,#1
+2301F237	insert  d2,d2,d15,#6,#1
+2381F237	insert  d2,d2,d15,#7,#1
+2401F237	insert  d2,d2,d15,#8,#1
+2487F237	insert  d2,d2,d15,#9,#7
+2A0A5237	insert  d2,d2,d5,#20,#10
+3008F337	insert  d3,d3,d15,#0,#8
+3808F337	insert  d3,d3,d15,#16,#8
+3408F337	insert  d3,d3,d15,#8,#8
+500A0537	insert  d5,d5,d0,#0,#10
+650A0137	insert  d6,d1,d0,#10,#10
+650A06B7	insert  d6,d6,#0,#10,#10
+600AF637	insert  d6,d6,d15,#0,#10
+6A0A9637	insert  d6,d6,d9,#20,#10
+80010FB7	insert  d8,d15,#0,#0,#1
+87810837	insert  d8,d8,d0,#15,#1
+8E810837	insert  d8,d8,d0,#29,#1
+83810837	insert  d8,d8,d0,#7,#1
+8F811837	insert  d8,d8,d1,#31,#1
+8F01F837	insert  d8,d8,d15,#30,#1
+8F81F837	insert  d8,d8,d15,#31,#1
+8D024837	insert  d8,d8,d4,#26,#2
+880A5837	insert  d8,d8,d5,#16,#10
+80036837	insert  d8,d8,d6,#0,#3
+8E017837	insert  d8,d8,d7,#28,#1
+90100937	insert  d9,d9,d0,#0,#16
+98100937	insert  d9,d9,d0,#16,#16
+9010F937	insert  d9,d9,d15,#0,#16
+9604F937	insert  d9,d9,d15,#12,#4
+9F01F937	insert  d9,d9,d15,#30,#1
+0141004B	itof    d0,d0
+01410F4B	itof    d0,d15
+0141094B	itof    d0,d9
+1141014B	itof    d1,d1
+1141064B	itof    d1,d6
+F141004B	itof    d15,d0
+F141014B	itof    d15,d1
+F1410A4B	itof    d15,d10
+F1410F4B	itof    d15,d15
+F141024B	itof    d15,d2
+F141044B	itof    d15,d4
+F141054B	itof    d15,d5
+F141064B	itof    d15,d6
+2141004B	itof    d2,d0
+21410F4B	itof    d2,d15
+2141024B	itof    d2,d2
+4141044B	itof    d4,d4
+5141044B	itof    d5,d4
+5141054B	itof    d5,d5
+0EDC	ji      a14
+0FDC	ji a15
+ECD4	ld.a    a12,[a14]
+ACC8	ld.a    a12,[a15], 40
+BCC8	ld.a    a12,[a15], 44
+2CD4	ld.a    a12,[a2]
+CDD4	ld.a    a13,[a12]
+EDD4	ld.a    a13,[a14]
+FDD4	ld.a    a13,[a15]
+2DD4	ld.a    a13,[a2]
+CED4	ld.a    a14,[a12]
+DED4	ld.a    a14,[a13]
+AEC8	ld.a    a14,[a15], 40
+AFD4	ld.a    a15,[a10]
+01D8	ld.a    a15,[a10], 4
+02D8	ld.a    a15,[a10], 8
+CFD4	ld.a    a15,[a12]
+C1CC	ld.a    a15,[a12], 4
+C2CC	ld.a    a15,[a12], 8
+DFD4	ld.a    a15,[a13]
+D1CC	ld.a    a15,[a13], 4
+E1CC	ld.a    a15,[a14], 4
+FFD4	ld.a    a15,[a15]
+3FC8	ld.a    a15,[a15], 12
+1FC8	ld.a    a15,[a15], 4
+2FC8	ld.a    a15,[a15], 8
+2FD4	ld.a    a15,[a2]
+21CC	ld.a    a15,[a2], 4
+4FD4	ld.a    a15,[a4]
+43CC	ld.a    a15,[a4], 12
+41CC	ld.a    a15,[a4], 4
+4CCC	ld.a    a15,[a4], 48
+42CC	ld.a    a15,[a4], 8
+5FD4	ld.a    a15,[a5]
+51CC	ld.a    a15,[a5], 4
+A2D4	ld.a    a2,[a10]
+C2D4	ld.a    a2,[a12]
+D2D4	ld.a    a2,[a13]
+E2D4	ld.a    a2,[a14]
+F2D4	ld.a    a2,[a15]
+32C8	ld.a    a2,[a15], 12
+12C8	ld.a    a2,[a15], 4
+A2C8	ld.a    a2,[a15], 40
+B2C8	ld.a    a2,[a15], 44
+C2C8	ld.a    a2,[a15], 48
+22C8	ld.a    a2,[a15], 8
+22D4	ld.a    a2,[a2]
+A4D4	ld.a    a4,[a10]
+C4D4	ld.a    a4,[a12]
+D4D4	ld.a    a4,[a13]
+E4D4	ld.a    a4,[a14]
+F4D4	ld.a    a4,[a15]
+14C8	ld.a    a4,[a15], 4
+C4C8	ld.a    a4,[a15], 48
+24C8	ld.a    a4,[a15], 8
+24D4	ld.a    a4,[a2]
+44D4	ld.a    a4,[a4]
+A5D4	ld.a    a5,[a10]
+C5D4	ld.a    a5,[a12]
+F5D4	ld.a    a5,[a15]
+15C8	ld.a    a5,[a15], 4
+B5C8	ld.a    a5,[a15], 44
+25C8	ld.a    a5,[a15], 8
+25D4	ld.a    a5,[a2]
+55D4	ld.a    a5,[a5]
+F6D4	ld.a    a6,[a15]
+C6C8	ld.a    a6,[a15], 48
+A014	ld.bu   d0,[a10]
+C014	ld.bu   d0,[a12]
+D014	ld.bu   d0,[a13]
+F014	ld.bu   d0,[a15]
+0610F039	ld.bu   d0,[a15], 0x6010
+0612F039	ld.bu   d0,[a15], 0x6012
+061DF039	ld.bu   d0,[a15], 0x601d
+0624F039	ld.bu   d0,[a15], 0x6024
+062DF039	ld.bu   d0,[a15], 0x602d
+0633F039	ld.bu   d0,[a15], 0x6033
+063CF039	ld.bu   d0,[a15], 0x603c
+063EF039	ld.bu   d0,[a15], 0x603e
+063FF039	ld.bu   d0,[a15], 0x603f
+A008	ld.bu   d0,[a15], 10
+0610F039	ld.bu   d0,[a15], 24592
+0612F039	ld.bu   d0,[a15], 24594
+061DF039	ld.bu   d0,[a15], 24605
+0624F039	ld.bu   d0,[a15], 24612
+062DF039	ld.bu   d0,[a15], 24621
+0633F039	ld.bu   d0,[a15], 24627
+063CF039	ld.bu   d0,[a15], 24636
+063EF039	ld.bu   d0,[a15], 24638
+063FF039	ld.bu   d0,[a15], 24639
+4008	ld.bu   d0,[a15], 4
+8008	ld.bu   d0,[a15], 8
+0610F039	ld.bu   d0,[a15]@los(0xf0036010)
+0612F039	ld.bu   d0,[a15]@los(0xf0036012)
+061DF039	ld.bu   d0,[a15]@los(0xf003601d)
+0624F039	ld.bu   d0,[a15]@los(0xf0036024)
+062DF039	ld.bu   d0,[a15]@los(0xf003602d)
+0633F039	ld.bu   d0,[a15]@los(0xf0036033)
+063CF039	ld.bu   d0,[a15]@los(0xf003603c)
+063EF039	ld.bu   d0,[a15]@los(0xf003603e)
+063FF039	ld.bu   d0,[a15]@los(0xf003603f)
+2014	ld.bu   d0,[a2]
+06142039	ld.bu   d0,[a2], 0x6014
+06192039	ld.bu   d0,[a2], 0x6019
+061B2039	ld.bu   d0,[a2], 0x601b
+061C2039	ld.bu   d0,[a2], 0x601c
+06292039	ld.bu   d0,[a2], 0x6029
+062C2039	ld.bu   d0,[a2], 0x602c
+06142039	ld.bu   d0,[a2], 24596
+06192039	ld.bu   d0,[a2], 24601
+061B2039	ld.bu   d0,[a2], 24603
+061C2039	ld.bu   d0,[a2], 24604
+06292039	ld.bu   d0,[a2], 24617
+062C2039	ld.bu   d0,[a2], 24620
+06142039	ld.bu   d0,[a2]@los(0xf0036014)
+06192039	ld.bu   d0,[a2]@los(0xf0036019)
+061B2039	ld.bu   d0,[a2]@los(0xf003601b)
+061C2039	ld.bu   d0,[a2]@los(0xf003601c)
+06292039	ld.bu   d0,[a2]@los(0xf0036029)
+062C2039	ld.bu   d0,[a2]@los(0xf003602c)
+4014	ld.bu   d0,[a4]
+C114	ld.bu   d1,[a12]
+F114	ld.bu   d1,[a15]
+4108	ld.bu   d1,[a15], 4
+8108	ld.bu   d1,[a15], 8
+2114	ld.bu   d1,[a2]
+FA14	ld.bu   d10,[a15]
+AF14	ld.bu   d15,[a10]
+AA0C	ld.bu   d15,[a10], 10
+AC0C	ld.bu   d15,[a10], 12
+A40C	ld.bu   d15,[a10], 4
+A80C	ld.bu   d15,[a10], 8
+CF14	ld.bu   d15,[a12]
+CC0C	ld.bu   d15,[a12], 12
+C40C	ld.bu   d15,[a12], 4
+C80C	ld.bu   d15,[a12], 8
+DF14	ld.bu   d15,[a13]
+DA0C	ld.bu   d15,[a13], 10
+DC0C	ld.bu   d15,[a13], 12
+D40C	ld.bu   d15,[a13], 4
+EC0C	ld.bu   d15,[a14], 12
+E40C	ld.bu   d15,[a14], 4
+FF14	ld.bu   d15,[a15]
+0F08	ld.bu   d15,[a15], 0	; MANUALLY GENERATED
+A142FF39	ld.bu   d15,[a15], 0x1682
+A15EFF39	ld.bu   d15,[a15], 0x169e
+A17EFF39	ld.bu   d15,[a15], 0x16be
+0610FF39	ld.bu   d15,[a15], 0x6010
+0611FF39	ld.bu   d15,[a15], 0x6011
+0614FF39	ld.bu   d15,[a15], 0x6014
+0618FF39	ld.bu   d15,[a15], 0x6018
+0619FF39	ld.bu   d15,[a15], 0x6019
+061BFF39	ld.bu   d15,[a15], 0x601b
+061DFF39	ld.bu   d15,[a15], 0x601d
+0624FF39	ld.bu   d15,[a15], 0x6024
+0628FF39	ld.bu   d15,[a15], 0x6028
+0629FF39	ld.bu   d15,[a15], 0x6029
+062AFF39	ld.bu   d15,[a15], 0x602a
+062BFF39	ld.bu   d15,[a15], 0x602b
+062DFF39	ld.bu   d15,[a15], 0x602d
+0630FF39	ld.bu   d15,[a15], 0x6030
+0631FF39	ld.bu   d15,[a15], 0x6031
+0632FF39	ld.bu   d15,[a15], 0x6032
+0633FF39	ld.bu   d15,[a15], 0x6033
+0635FF39	ld.bu   d15,[a15], 0x6035
+0637FF39	ld.bu   d15,[a15], 0x6037
+0639FF39	ld.bu   d15,[a15], 0x6039
+063CFF39	ld.bu   d15,[a15], 0x603c
+063EFF39	ld.bu   d15,[a15], 0x603e
+1600FF39	ld.bu   d15,[a15], 0x6040
+160CFF39	ld.bu   d15,[a15], 0x604c
+3634FF39	ld.bu   d15,[a15], 0x60f4
+462CFF39	ld.bu   d15,[a15], 0x612c
+4630FF39	ld.bu   d15,[a15], 0x6130
+AF08	ld.bu   d15,[a15], 10
+CF08	ld.bu   d15,[a15], 12
+0610FF39	ld.bu   d15,[a15], 24592
+0611FF39	ld.bu   d15,[a15], 24593
+0614FF39	ld.bu   d15,[a15], 24596
+0618FF39	ld.bu   d15,[a15], 24600
+0619FF39	ld.bu   d15,[a15], 24601
+061BFF39	ld.bu   d15,[a15], 24603
+061DFF39	ld.bu   d15,[a15], 24605
+0624FF39	ld.bu   d15,[a15], 24612
+0628FF39	ld.bu   d15,[a15], 24616
+0629FF39	ld.bu   d15,[a15], 24617
+062AFF39	ld.bu   d15,[a15], 24618
+062BFF39	ld.bu   d15,[a15], 24619
+062DFF39	ld.bu   d15,[a15], 24621
+0630FF39	ld.bu   d15,[a15], 24624
+0631FF39	ld.bu   d15,[a15], 24625
+0632FF39	ld.bu   d15,[a15], 24626
+0633FF39	ld.bu   d15,[a15], 24627
+0635FF39	ld.bu   d15,[a15], 24629
+0637FF39	ld.bu   d15,[a15], 24631
+0639FF39	ld.bu   d15,[a15], 24633
+063CFF39	ld.bu   d15,[a15], 24636
+063EFF39	ld.bu   d15,[a15], 24638
+1600FF39	ld.bu   d15,[a15], 24640
+160CFF39	ld.bu   d15,[a15], 24652
+3634FF39	ld.bu   d15,[a15], 24820
+462CFF39	ld.bu   d15,[a15], 24876
+4630FF39	ld.bu   d15,[a15], 24880
+4F08	ld.bu   d15,[a15], 4
+A142FF39	ld.bu   d15,[a15], 5762
+A15EFF39	ld.bu   d15,[a15], 5790
+A17EFF39	ld.bu   d15,[a15], 5822
+8F08	ld.bu   d15,[a15], 8
+021EFF39	ld.bu   d15,[a15], 8222
+A142FF39	ld.bu   d15,[a15]@los(0xf0021682)
+A15EFF39	ld.bu   d15,[a15]@los(0xf002169e)
+A17EFF39	ld.bu   d15,[a15]@los(0xf00216be)
+0610FF39	ld.bu   d15,[a15]@los(0xf0036010)
+0611FF39	ld.bu   d15,[a15]@los(0xf0036011)
+0614FF39	ld.bu   d15,[a15]@los(0xf0036014)
+0618FF39	ld.bu   d15,[a15]@los(0xf0036018)
+0619FF39	ld.bu   d15,[a15]@los(0xf0036019)
+061BFF39	ld.bu   d15,[a15]@los(0xf003601b)
+061DFF39	ld.bu   d15,[a15]@los(0xf003601d)
+0624FF39	ld.bu   d15,[a15]@los(0xf0036024)
+0628FF39	ld.bu   d15,[a15]@los(0xf0036028)
+0629FF39	ld.bu   d15,[a15]@los(0xf0036029)
+062AFF39	ld.bu   d15,[a15]@los(0xf003602a)
+062BFF39	ld.bu   d15,[a15]@los(0xf003602b)
+062DFF39	ld.bu   d15,[a15]@los(0xf003602d)
+0630FF39	ld.bu   d15,[a15]@los(0xf0036030)
+0631FF39	ld.bu   d15,[a15]@los(0xf0036031)
+0632FF39	ld.bu   d15,[a15]@los(0xf0036032)
+0633FF39	ld.bu   d15,[a15]@los(0xf0036033)
+0635FF39	ld.bu   d15,[a15]@los(0xf0036035)
+0637FF39	ld.bu   d15,[a15]@los(0xf0036037)
+0639FF39	ld.bu   d15,[a15]@los(0xf0036039)
+063CFF39	ld.bu   d15,[a15]@los(0xf003603c)
+063EFF39	ld.bu   d15,[a15]@los(0xf003603e)
+1600FF39	ld.bu   d15,[a15]@los(0xf0036040)
+160CFF39	ld.bu   d15,[a15]@los(0xf003604c)
+3634FF39	ld.bu   d15,[a15]@los(0xf00360f4)
+462CFF39	ld.bu   d15,[a15]@los(0xf003612c)
+4630FF39	ld.bu   d15,[a15]@los(0xf0036130)
+2F14	ld.bu   d15,[a2]
+06142F39	ld.bu   d15,[a2], 0x6014
+06182F39	ld.bu   d15,[a2], 0x6018
+061A2F39	ld.bu   d15,[a2], 0x601a
+06242F39	ld.bu   d15,[a2], 0x6024
+06282F39	ld.bu   d15,[a2], 0x6028
+062A2F39	ld.bu   d15,[a2], 0x602a
+062B2F39	ld.bu   d15,[a2], 0x602b
+062E2F39	ld.bu   d15,[a2], 0x602e
+06332F39	ld.bu   d15,[a2], 0x6033
+06352F39	ld.bu   d15,[a2], 0x6035
+06372F39	ld.bu   d15,[a2], 0x6037
+16032F39	ld.bu   d15,[a2], 0x6043
+160F2F39	ld.bu   d15,[a2], 0x604f
+46302F39	ld.bu   d15,[a2], 0x6130
+06142F39	ld.bu   d15,[a2], 24596
+06182F39	ld.bu   d15,[a2], 24600
+061A2F39	ld.bu   d15,[a2], 24602
+06242F39	ld.bu   d15,[a2], 24612
+06282F39	ld.bu   d15,[a2], 24616
+062A2F39	ld.bu   d15,[a2], 24618
+062B2F39	ld.bu   d15,[a2], 24619
+062E2F39	ld.bu   d15,[a2], 24622
+06332F39	ld.bu   d15,[a2], 24627
+06352F39	ld.bu   d15,[a2], 24629
+06372F39	ld.bu   d15,[a2], 24631
+16032F39	ld.bu   d15,[a2], 24643
+160F2F39	ld.bu   d15,[a2], 24655
+46302F39	ld.bu   d15,[a2], 24880
+021F2F39	ld.bu   d15,[a2], 8223
+06142F39	ld.bu   d15,[a2]@los(0xf0036014)
+06182F39	ld.bu   d15,[a2]@los(0xf0036018)
+061A2F39	ld.bu   d15,[a2]@los(0xf003601a)
+06242F39	ld.bu   d15,[a2]@los(0xf0036024)
+06282F39	ld.bu   d15,[a2]@los(0xf0036028)
+062A2F39	ld.bu   d15,[a2]@los(0xf003602a)
+062B2F39	ld.bu   d15,[a2]@los(0xf003602b)
+062E2F39	ld.bu   d15,[a2]@los(0xf003602e)
+06332F39	ld.bu   d15,[a2]@los(0xf0036033)
+06352F39	ld.bu   d15,[a2]@los(0xf0036035)
+06372F39	ld.bu   d15,[a2]@los(0xf0036037)
+16032F39	ld.bu   d15,[a2]@los(0xf0036043)
+160F2F39	ld.bu   d15,[a2]@los(0xf003604f)
+46302F39	ld.bu   d15,[a2]@los(0xf0036130)
+4F14	ld.bu   d15,[a4]
+4A0C	ld.bu   d15,[a4], 10
+4C0C	ld.bu   d15,[a4], 12
+440C	ld.bu   d15,[a4], 4
+480C	ld.bu   d15,[a4], 8
+5F14	ld.bu   d15,[a5]
+5A0C	ld.bu   d15,[a5], 10
+5C0C	ld.bu   d15,[a5], 12
+540C	ld.bu   d15,[a5], 4
+580C	ld.bu   d15,[a5], 8
+6F14	ld.bu   d15,[a6]
+640C	ld.bu   d15,[a6], 4
+A214	ld.bu   d2,[a10]
+F214	ld.bu   d2,[a15]
+8208	ld.bu   d2,[a15], 8
+C414	ld.bu   d4,[a12]
+F414	ld.bu   d4,[a15]
+A408	ld.bu   d4,[a15], 10
+C408	ld.bu   d4,[a15], 12
+4408	ld.bu   d4,[a15], 4
+8408	ld.bu   d4,[a15], 8
+2414	ld.bu   d4,[a2]
+4414	ld.bu   d4,[a4]
+A508	ld.bu   d5,[a15], 10
+4708	ld.bu   d7,[a15], 4	; MANUALLY GENERATED
+F814	ld.bu   d8,[a15]
+4908	ld.bu   d9,[a15], 4
+A094	ld.h    d0,[a10]
+C094	ld.h    d0,[a12]
+D094	ld.h    d0,[a13]
+2088	ld.h    d0,[a15], 4
+2094	ld.h    d0,[a2]
+6094	ld.h    d0,[a6]
+6194	ld.h    d1,[a6]
+AF94	ld.h    d15,[a10]
+A68C	ld.h    d15,[a10], 12
+A28C	ld.h    d15,[a10], 4
+CF94	ld.h    d15,[a12]
+DF94	ld.h    d15,[a13]
+FF94	ld.h    d15,[a15]
+2F88	ld.h    d15,[a15], 4
+2F94	ld.h    d15,[a2]
+228C	ld.h    d15,[a2], 4
+428C	ld.h    d15,[a4], 4
+5F94	ld.h    d15,[a5]
+F294	ld.h    d2,[a15]
+2288	ld.h    d2,[a15], 4
+C494	ld.h    d4,[a12]
+D494	ld.h    d4,[a13]
+F494	ld.h    d4,[a15]
+2494	ld.h    d4,[a2]
+2594	ld.h    d5,[a2]
+0638F0B9	ld.hu   d0,[a15], 0x6038
+0638F0B9	ld.hu   d0,[a15], 24632
+0638F0B9	ld.hu   d0,[a15]@los(0xf0036038)
+0638FFB9	ld.hu   d15,[a15], 0x6038
+0638FFB9	ld.hu   d15,[a15], 24632
+0638FFB9	ld.hu   d15,[a15]@los(0xf0036038)
+A054	ld.w    d0,[a10]
+C054	ld.w    d0,[a12]
+F054	ld.w    d0,[a15]
+2600F019	ld.w    d0,[a15], 0x6080
+2604F019	ld.w    d0,[a15], 0x6084
+2608F019	ld.w    d0,[a15], 0x6088
+3630F019	ld.w    d0,[a15], 0x60f0
+4630F019	ld.w    d0,[a15], 0x6130
+8620F019	ld.w    d0,[a15], 0x6220
+8628F019	ld.w    d0,[a15], 0x6228
+2600F019	ld.w    d0,[a15], 24704
+2604F019	ld.w    d0,[a15], 24708
+2608F019	ld.w    d0,[a15], 24712
+3630F019	ld.w    d0,[a15], 24816
+4630F019	ld.w    d0,[a15], 24880
+8620F019	ld.w    d0,[a15], 25120
+8628F019	ld.w    d0,[a15], 25128
+1048	ld.w    d0,[a15], 4
+B048	ld.w    d0,[a15], 44
+2048	ld.w    d0,[a15], 8
+2600F019	ld.w    d0,[a15]@los(0xf0036080)
+2604F019	ld.w    d0,[a15]@los(0xf0036084)
+2608F019	ld.w    d0,[a15]@los(0xf0036088)
+3630F019	ld.w    d0,[a15]@los(0xf00360f0)
+4630F019	ld.w    d0,[a15]@los(0xf0036130)
+8620F019	ld.w    d0,[a15]@los(0xf0036220)
+8628F019	ld.w    d0,[a15]@los(0xf0036228)
+2054	ld.w    d0,[a2]
+06302019	ld.w    d0,[a2], 0x6030
+06342019	ld.w    d0,[a2], 0x6034
+16002019	ld.w    d0,[a2], 0x6040
+160C2019	ld.w    d0,[a2], 0x604c
+26002019	ld.w    d0,[a2], 0x6080
+26042019	ld.w    d0,[a2], 0x6084
+06302019	ld.w    d0,[a2], 24624
+06342019	ld.w    d0,[a2], 24628
+16002019	ld.w    d0,[a2], 24640
+160C2019	ld.w    d0,[a2], 24652
+26002019	ld.w    d0,[a2], 24704
+26042019	ld.w    d0,[a2], 24708
+06302019	ld.w    d0,[a2]@los(0xf0036030)
+06342019	ld.w    d0,[a2]@los(0xf0036034)
+16002019	ld.w    d0,[a2]@los(0xf0036040)
+160C2019	ld.w    d0,[a2]@los(0xf003604c)
+26002019	ld.w    d0,[a2]@los(0xf0036080)
+26042019	ld.w    d0,[a2]@los(0xf0036084)
+3054	ld.w    d0,[a3]
+4054	ld.w    d0,[a4]
+C0244019	ld.w    d0,[a4], 804
+C0284019	ld.w    d0,[a4], 808
+5054	ld.w    d0,[a5]
+F154	ld.w    d1,[a15]
+1148	ld.w    d1,[a15], 4
+A148	ld.w    d1,[a15], 40
+C148	ld.w    d1,[a15], 48
+2148	ld.w    d1,[a15], 8
+3154	ld.w    d1,[a3]
+4154	ld.w    d1,[a4]
+5154	ld.w    d1,[a5]
+1B48	ld.w    d11,[a15], 4
+FC54	ld.w    d12,[a15]
+2C54	ld.w    d12,[a2]
+FD54	ld.w    d13,[a15]
+AF54	ld.w    d15,[a10]
+0358	ld.w    d15,[a10], 12
+0158	ld.w    d15,[a10], 4
+0258	ld.w    d15,[a10], 8
+CF54	ld.w    d15,[a12]
+C14C	ld.w    d15,[a12], 4
+CA4C	ld.w    d15,[a12], 40
+CB4C	ld.w    d15,[a12], 44
+CC4C	ld.w    d15,[a12], 48
+DF54	ld.w    d15,[a13]
+D34C	ld.w    d15,[a13], 12
+D14C	ld.w    d15,[a13], 4
+DA4C	ld.w    d15,[a13], 40
+DB4C	ld.w    d15,[a13], 44
+DC4C	ld.w    d15,[a13], 48
+D24C	ld.w    d15,[a13], 8
+E14C	ld.w    d15,[a14], 4
+E24C	ld.w    d15,[a14], 8
+FF54	ld.w    d15,[a15]
+0210FF19	ld.w    d15,[a15], 0x2010
+0630FF19	ld.w    d15,[a15], 0x6030
+3630FF19	ld.w    d15,[a15], 0x60f0
+4630FF19	ld.w    d15,[a15], 0x6130
+06ACFF19	ld.w    d15,[a15], 0x682c
+3F48	ld.w    d15,[a15], 12
+0630FF19	ld.w    d15,[a15], 24624
+3630FF19	ld.w    d15,[a15], 24816
+4630FF19	ld.w    d15,[a15], 24880
+06ACFF19	ld.w    d15,[a15], 26668
+1F48	ld.w    d15,[a15], 4
+AF48	ld.w    d15,[a15], 40
+BF48	ld.w    d15,[a15], 44
+CF48	ld.w    d15,[a15], 48
+2F48	ld.w    d15,[a15], 8
+C024FF19	ld.w    d15,[a15], 804
+C028FF19	ld.w    d15,[a15], 808
+0210FF19	ld.w    d15,[a15], 8208
+D004FF19	ld.w    d15,[a15], 836
+0630FF19	ld.w    d15,[a15]@los(0xf0036030)
+3630FF19	ld.w    d15,[a15]@los(0xf00360f0)
+4630FF19	ld.w    d15,[a15]@los(0xf0036130)
+06ACFF19	ld.w    d15,[a15]@los(0xf003682c)
+0210FF19	ld.w    d15,[a15]@los(0xf8002010)
+2F54	ld.w    d15,[a2]
+02142F19	ld.w    d15,[a2], 0x2014
+26082F19	ld.w    d15,[a2], 0x6088
+36302F19	ld.w    d15,[a2], 0x60f0
+234C	ld.w    d15,[a2], 12
+26082F19	ld.w    d15,[a2], 24712
+36302F19	ld.w    d15,[a2], 24816
+214C	ld.w    d15,[a2], 4
+224C	ld.w    d15,[a2], 8
+C02C2F19	ld.w    d15,[a2], 812
+C0302F19	ld.w    d15,[a2], 816
+02142F19	ld.w    d15,[a2], 8212
+26082F19	ld.w    d15,[a2]@los(0xf0036088)
+36302F19	ld.w    d15,[a2]@los(0xf00360f0)
+02142F19	ld.w    d15,[a2]@los(0xf8002014)
+3F54	ld.w    d15,[a3]
+4F54	ld.w    d15,[a4]
+434C	ld.w    d15,[a4], 12
+414C	ld.w    d15,[a4], 4
+4A4C	ld.w    d15,[a4], 40
+4B4C	ld.w    d15,[a4], 44
+4C4C	ld.w    d15,[a4], 48
+424C	ld.w    d15,[a4], 8
+5F54	ld.w    d15,[a5]
+534C	ld.w    d15,[a5], 12
+514C	ld.w    d15,[a5], 4
+524C	ld.w    d15,[a5], 8
+A254	ld.w    d2,[a10]
+F254	ld.w    d2,[a15]
+8620F219	ld.w    d2,[a15], 0x6220
+8628F219	ld.w    d2,[a15], 0x6228
+3248	ld.w    d2,[a15], 12
+8620F219	ld.w    d2,[a15], 25120
+8628F219	ld.w    d2,[a15], 25128
+1248	ld.w    d2,[a15], 4
+2248	ld.w    d2,[a15], 8
+8620F219	ld.w    d2,[a15]@los(0xf0036220)
+8628F219	ld.w    d2,[a15]@los(0xf0036228)
+4254	ld.w    d2,[a4]
+F354	ld.w    d3,[a15]
+1348	ld.w    d3,[a15], 4
+4354	ld.w    d3,[a4]
+5354	ld.w    d3,[a5]
+A454	ld.w    d4,[a10]
+C454	ld.w    d4,[a12]
+F454	ld.w    d4,[a15]
+3448	ld.w    d4,[a15], 12
+1448	ld.w    d4,[a15], 4
+2448	ld.w    d4,[a15], 8
+2454	ld.w    d4,[a2]
+4454	ld.w    d4,[a4]
+F554	ld.w    d5,[a15]
+3548	ld.w    d5,[a15], 12
+2554	ld.w    d5,[a2]
+4554	ld.w    d5,[a4]
+A854	ld.w    d8,[a10]
+F854	ld.w    d8,[a15]
+1848	ld.w    d8,[a15], 4
+2848	ld.w    d8,[a15], 8
+2854	ld.w    d8,[a2]
+F954	ld.w    d9,[a15]
+3948	ld.w    d9,[a15], 12
+2948	ld.w    d9,[a15], 8
+2954	ld.w    d9,[a2]
+3614CCD9	lea     a12,[a12], 0x60d4
+3614CCD9	lea     a12,[a12], 24788
+3614CCD9	lea     a12,[a12]@los(0xf00360d4)
+457CFFD9	lea     a15,[a15], 0x553c
+5554FFD9	lea     a15,[a15], 0x5554
+7570FFD9	lea     a15,[a15], 0x55f0
+0600FFD9	lea     a15,[a15], 0x6000
+0630FFD9	lea     a15,[a15], 0x6030
+0634FFD9	lea     a15,[a15], 0x6034
+0638FFD9	lea     a15,[a15], 0x6038
+3614FFD9	lea     a15,[a15], 0x60d4
+3630FFD9	lea     a15,[a15], 0x60f0
+4600FFD9	lea     a15,[a15], 0x6100
+460CFFD9	lea     a15,[a15], 0x610c
+4618FFD9	lea     a15,[a15], 0x6118
+8610FFD9	lea     a15,[a15], 0x6210
+862CFFD9	lea     a15,[a15], 0x622c
+C600FFD9	lea     a15,[a15], 0x6300
+0860FFD9	lea     a15,[a15], 0x8420
+0A00FFD9	lea     a15,[a15], 0xa000
+8A00FFD9	lea     a15,[a15], 0xa200
+9A90FFD9	lea     a15,[a15], 0xaa50
+0B00FFD9	lea     a15,[a15], 0xb000
+457CFFD9	lea     a15,[a15], 21820
+5554FFD9	lea     a15,[a15], 21844
+7570FFD9	lea     a15,[a15], 22000
+0600FFD9	lea     a15,[a15], 24576
+0630FFD9	lea     a15,[a15], 24624
+0634FFD9	lea     a15,[a15], 24628
+0638FFD9	lea     a15,[a15], 24632
+3614FFD9	lea     a15,[a15], 24788
+3630FFD9	lea     a15,[a15], 24816
+4600FFD9	lea     a15,[a15], 24832
+460CFFD9	lea     a15,[a15], 24844
+4618FFD9	lea     a15,[a15], 24856
+8610FFD9	lea     a15,[a15], 25104
+862CFFD9	lea     a15,[a15], 25132
+C600FFD9	lea     a15,[a15], 25344
+0860FFD9	lea     a15,[a15], 33824
+0A00FFD9	lea     a15,[a15], 40960
+8A00FFD9	lea     a15,[a15], 41472
+9A90FFD9	lea     a15,[a15], 43600
+0B00FFD9	lea     a15,[a15], 45056
+457CFFD9	lea     a15,[a15]@los(0xaf00553c)
+5554FFD9	lea     a15,[a15]@los(0xaf005554)
+7570FFD9	lea     a15,[a15]@los(0xaf0055f0)
+9A90FFD9	lea     a15,[a15]@los(0xaf00aa50)
+0600FFD9	lea     a15,[a15]@los(0xf0036000)
+0630FFD9	lea     a15,[a15]@los(0xf0036030)
+0634FFD9	lea     a15,[a15]@los(0xf0036034)
+0638FFD9	lea     a15,[a15]@los(0xf0036038)
+3614FFD9	lea     a15,[a15]@los(0xf00360d4)
+3630FFD9	lea     a15,[a15]@los(0xf00360f0)
+4600FFD9	lea     a15,[a15]@los(0xf0036100)
+460CFFD9	lea     a15,[a15]@los(0xf003610c)
+4618FFD9	lea     a15,[a15]@los(0xf0036118)
+8610FFD9	lea     a15,[a15]@los(0xf0036210)
+862CFFD9	lea     a15,[a15]@los(0xf003622c)
+0860FFD9	lea     a15,[a15]@los(0xf0038420)
+0A00FFD9	lea     a15,[a15]@los(0xf003a000)
+8A00FFD9	lea     a15,[a15]@los(0xf003a200)
+0B00FFD9	lea     a15,[a15]@los(0xf003b000)
+C600FFD9	lea     a15,[a15]@los(0xf0066300)
+22343FD9	lea     a15,[a3], 8372
+32243FD9	lea     a15,[a3], 8420
+003F02C5	lea     a2,63
+B03422D9	lea     a2,[a2], 0x02f4
+021422D9	lea     a2,[a2], 0x2014
+063022D9	lea     a2,[a2], 0x6030
+063422D9	lea     a2,[a2], 0x6034
+160022D9	lea     a2,[a2], 0x6040
+160C22D9	lea     a2,[a2], 0x604c
+260022D9	lea     a2,[a2], 0x6080
+260422D9	lea     a2,[a2], 0x6084
+260822D9	lea     a2,[a2], 0x6088
+361422D9	lea     a2,[a2], 0x60d4
+861022D9	lea     a2,[a2], 0x6210
+862C22D9	lea     a2,[a2], 0x622c
+285022D9	lea     a2,[a2], 0x8490
+9A9822D9	lea     a2,[a2], 0xaa58
+0E0022D9	lea     a2,[a2], 0xe000
+4FF022D9	lea     a2,[a2], 0xfd30
+063022D9	lea     a2,[a2], 24624
+063422D9	lea     a2,[a2], 24628
+160022D9	lea     a2,[a2], 24640
+160C22D9	lea     a2,[a2], 24652
+260022D9	lea     a2,[a2], 24704
+260422D9	lea     a2,[a2], 24708
+260822D9	lea     a2,[a2], 24712
+361422D9	lea     a2,[a2], 24788
+861022D9	lea     a2,[a2], 25104
+862C22D9	lea     a2,[a2], 25132
+285022D9	lea     a2,[a2], 33936
+9A9822D9	lea     a2,[a2], 43608
+0E0022D9	lea     a2,[a2], 57344
+4FF022D9	lea     a2,[a2], 64816
+B03422D9	lea     a2,[a2], 756
+020022D9	lea     a2,[a2], 8192
+021422D9	lea     a2,[a2], 8212
+B03422D9	lea     a2,[a2]@los(0x701002f4)
+9A9822D9	lea     a2,[a2]@los(0xaf00aa58)
+063022D9	lea     a2,[a2]@los(0xf0036030)
+063422D9	lea     a2,[a2]@los(0xf0036034)
+160022D9	lea     a2,[a2]@los(0xf0036040)
+160C22D9	lea     a2,[a2]@los(0xf003604c)
+260022D9	lea     a2,[a2]@los(0xf0036080)
+260422D9	lea     a2,[a2]@los(0xf0036084)
+260822D9	lea     a2,[a2]@los(0xf0036088)
+361422D9	lea     a2,[a2]@los(0xf00360d4)
+861022D9	lea     a2,[a2]@los(0xf0036210)
+862C22D9	lea     a2,[a2]@los(0xf003622c)
+285022D9	lea     a2,[a2]@los(0xf0038490)
+0E0022D9	lea     a2,[a2]@los(0xf003e000)
+4FF022D9	lea     a2,[a2]@los(0xf019fd30)
+021422D9	lea     a2,[a2]@los(0xf8002014)
+223432D9	lea     a2,[a3], 8372
+322432D9	lea     a2,[a3], 8420
+001004C5	lea     a4,16
+001404C5	lea     a4,20
+0000A4D9	lea     a4,[a10],0		; PATCHED MANUALLY as Tasking is using 0x0A000049 - LEA A[a],A[b],off10 {[9:6][5:0]}
+B03444D9	lea     a4,[a4], 0x02f4
+0A0044D9	lea     a4,[a4], 0xa000
+8A0044D9	lea     a4,[a4], 0xa200
+AAA844D9	lea     a4,[a4], 0xaaa8
+0B0044D9	lea     a4,[a4], 0xb000
+0A0044D9	lea     a4,[a4], 40960
+8A0044D9	lea     a4,[a4], 41472
+AAA844D9	lea     a4,[a4], 43688
+0B0044D9	lea     a4,[a4], 45056
+B03444D9	lea     a4,[a4], 756
+B03444D9	lea     a4,[a4]@los(0x701002f4)
+AAA844D9	lea     a4,[a4]@los(0xaf00aaa8)
+0A0044D9	lea     a4,[a4]@los(0xf003a000)
+8A0044D9	lea     a4,[a4]@los(0xf003a200)
+0B0044D9	lea     a4,[a4]@los(0xf003b000)
+0000A4D9	lea     a4,a10,0		; PATCHED MANUALLY as Tasking is using 0x0A000049 - LEA A[a],A[b],off10 {[9:6][5:0]}
+AAA855D9	lea     a5,[a5], 0xaaa8
+AAA855D9	lea     a5,[a5], 43688
+AAA855D9	lea     a5,[a5]@los(0xaf00aaa8)
+001806C5	lea     a6,24
+030400D9	lea a0, [a0], +0x3004
+070000D9	lea a0, [a0], +0x7000
+0FC0804D	mfcr    d0,#64520
+0FC0C04D	mfcr    d0,#64524
+0FC1404D	mfcr    d0,#64532
+0FE1C04D	mfcr    d0,#65052
+0FE2C04D	mfcr    d0,#65068
+1FD0004D	mfcr    d1,#64768
+1FE2C04D	mfcr    d1,#65068
+F920404D	mfcr    d15,#37380
+FFC0004D	mfcr    d15,#64512
+FFC0404D	mfcr    d15,#64516
+FFC1004D	mfcr    d15,#64528
+FFE0004D	mfcr    d15,#65024
+FFE0404D	mfcr    d15,#65028
+FFE1C04D	mfcr    d15,#65052
+FFE2C04D	mfcr    d15,#65068
+EC02	mov       d12,d14        ;   e12 = El
+F082	mov     d0,#-1
+0082	mov     d0,#0
+1082	mov     d0,#1
+003E803B	mov     d0,#1000
+003FF03B	mov     d0,#1023
+0040003B	mov     d0,#1024
+02D0003B	mov     d0,#11520
+0000C03B	mov     d0,#12
+0008003B	mov     d0,#128
+0333303B	mov     d0,#13107
+03D0903B	mov     d0,#15625
+0001003B	mov     d0,#16
+0400003B	mov     d0,#16384
+0400103B	mov     d0,#16385
+047AE03B	mov     d0,#18350
+000BC03B	mov     d0,#188
+2082	mov     d0,#2
+000C803B	mov     d0,#200
+0080003B	mov     d0,#2048
+0555503B	mov     d0,#21845
+0001603B	mov     d0,#22
+000FE03B	mov     d0,#254
+000FF03B	mov     d0,#255
+0010003B	mov     d0,#256
+0010103B	mov     d0,#257
+00AAA03B	mov     d0,#2730
+3082	mov     d0,#3
+00C0003B	mov     d0,#3072
+4082	mov     d0,#4
+00FDB03B	mov     d0,#4059
+00FFF03B	mov     d0,#4095
+0100003B	mov     d0,#4096
+0100103B	mov     d0,#4097
+0002A03B	mov     d0,#42
+5082	mov     d0,#5
+0020003B	mov     d0,#512
+0003803B	mov     d0,#56
+6082	mov     d0,#6
+7082	mov     d0,#7
+0000803B	mov     d0,#8
+0240003B	mov     d0,#9216
+1002	mov     d0,d1
+F002	mov     d0,d15
+2002	mov     d0,d2
+4002	mov     d0,d4
+5002	mov     d0,d5
+9002	mov     d0,d9
+F182	mov     d1,#-1
+E182	mov     d1,#-2
+0182	mov     d1,#0
+1182	mov     d1,#1
+1040003B	mov     d1,#1024
+12D0003B	mov     d1,#11520
+1333303B	mov     d1,#13107
+1055503B	mov     d1,#1365
+1000E03B	mov     d1,#14
+1001003B	mov     d1,#16
+2182	mov     d1,#2
+1080003B	mov     d1,#2048
+160C103B	mov     d1,#24769
+100FE03B	mov     d1,#254
+100FF03B	mov     d1,#255
+1010003B	mov     d1,#256
+3182	mov     d1,#3
+10F0F03B	mov     d1,#3855
+4182	mov     d1,#4
+10FDB03B	mov     d1,#4059
+1100003B	mov     d1,#4096
+6182	mov     d1,#6
+1004F03B	mov     d1,#79
+1005303B	mov     d1,#83
+1000903B	mov     d1,#9
+103E003B	mov     d1,#992
+0102	mov     d1,d0
+F102	mov     d1,d15
+0A82	mov     d10,#0
+1A82	mov     d10,#1
+A001003B	mov     d10,#16
+2A82	mov     d10,#2
+A7FFF03B	mov     d10,#32767
+1A02	mov     d10,d1
+2A02	mov     d10,d2
+4A02	mov     d10,d4
+5A02	mov     d10,d5
+6A02	mov     d10,d6
+0B82	mov     d11,#0
+1B82	mov     d11,#1
+B000A03B	mov     d11,#10
+B000C03B	mov     d11,#12
+B008003B	mov     d11,#128
+B000803B	mov     d11,#8
+B000903B	mov     d11,#9
+0B02	mov     d11,d0
+AB02	mov     d11,d10
+2B02	mov     d11,d2
+7B02	mov     d11,d7
+0C82	mov     d12,#0
+1C82	mov     d12,#1
+0C02	mov     d12,d0
+5C02	mov     d12,d5
+0D82	mov     d13,#0
+1D82	mov     d13,#1
+2D82	mov     d13,#2
+CD02	mov     d13,d12
+1E82	mov     d14,#1
+2E02	mov     d14,d2
+5E02	mov     d14,d5
+FFDA	mov     d15,#-1		; PATCH MANUALLY
+FFC0003B	mov     d15,#-1024
+00DA	mov     d15,#0
+01DA	mov     d15,#1
+0ADA	mov     d15,#10
+64DA	mov     d15,#100
+F03E803B	mov     d15,#1000
+F03FF03B	mov     d15,#1023
+F040003B	mov     d15,#1024
+0BDA	mov     d15,#11
+0CDA	mov     d15,#12
+78DA	mov     d15,#120
+F300003B	mov     d15,#12288
+F04E203B	mov     d15,#1250
+7EDA	mov     d15,#126
+7FDA	mov     d15,#127
+80DA	mov     d15,#128
+0DDA	mov     d15,#13
+F360003B	mov     d15,#13824
+0EDA	mov     d15,#14
+F37BD03B	mov     d15,#14269
+0FDA	mov     d15,#15
+F3D0903B	mov     d15,#15625
+10DA	mov     d15,#16
+A0DA	mov     d15,#160
+A1DA	mov     d15,#161
+F400003B	mov     d15,#16384
+F400103B	mov     d15,#16385
+F400503B	mov     d15,#16389
+F420003B	mov     d15,#16896
+AADA	mov     d15,#170
+F070003B	mov     d15,#1792
+12DA	mov     d15,#18
+13DA	mov     d15,#19
+BEDA	mov     d15,#190
+02DA	mov     d15,#2
+14DA	mov     d15,#20
+C8DA	mov     d15,#200
+F07D703B	mov     d15,#2007
+F080003B	mov     d15,#2048
+F500003B	mov     d15,#20480
+F082903B	mov     d15,#2089
+16DA	mov     d15,#22
+DEDA	mov     d15,#222
+DFDA	mov     d15,#223
+18DA	mov     d15,#24
+F098003B	mov     d15,#2432
+F5F5D03B	mov     d15,#24413
+F8DA	mov     d15,#248
+F09C403B	mov     d15,#2500
+FEDA	mov     d15,#254
+FFDA	mov     d15,#255
+F010003B	mov     d15,#256
+F010103B	mov     d15,#257
+1BDA	mov     d15,#27
+1CDA	mov     d15,#28
+1DDA	mov     d15,#29
+03DA	mov     d15,#3
+1EDA	mov     d15,#30
+1FDA	mov     d15,#31
+20DA	mov     d15,#32
+21DA	mov     d15,#33
+22DA	mov     d15,#34
+24DA	mov     d15,#36
+F0EA603B	mov     d15,#3750
+26DA	mov     d15,#38
+27DA	mov     d15,#39
+04DA	mov     d15,#4
+28DA	mov     d15,#40
+F0FFF03B	mov     d15,#4095
+F100003B	mov     d15,#4096
+F100103B	mov     d15,#4097
+F110003B	mov     d15,#4352
+F110203B	mov     d15,#4354
+F110503B	mov     d15,#4357
+2EDA	mov     d15,#46
+F120003B	mov     d15,#4608
+2FDA	mov     d15,#47
+F126F03B	mov     d15,#4719
+30DA	mov     d15,#48
+31DA	mov     d15,#49
+05DA	mov     d15,#5
+32DA	mov     d15,#50
+33DA	mov     d15,#51
+F020003B	mov     d15,#512
+34DA	mov     d15,#52
+35DA	mov     d15,#53
+36DA	mov     d15,#54
+37DA	mov     d15,#55
+38DA	mov     d15,#56
+39DA	mov     d15,#57
+3ADA	mov     d15,#58
+3BDA	mov     d15,#59
+06DA	mov     d15,#6
+3CDA	mov     d15,#60
+3DDA	mov     d15,#61
+3FDA	mov     d15,#63
+40DA	mov     d15,#64
+F028003B	mov     d15,#640
+41DA	mov     d15,#65
+42DA	mov     d15,#66
+43DA	mov     d15,#67
+44DA	mov     d15,#68
+07DA	mov     d15,#7
+F1C0003B	mov     d15,#7168
+4EDA	mov     d15,#78
+08DA	mov     d15,#8
+50DA	mov     d15,#80
+51DA	mov     d15,#81
+09DA	mov     d15,#9
+5BDA	mov     d15,#91
+5DDA	mov     d15,#93
+5EDA	mov     d15,#94
+F25A003B	mov     d15,#9632
+0F02	mov     d15,d0
+BF02	mov     d15,d11
+CF02	mov     d15,d12
+2F02	mov     d15,d2
+3F02	mov     d15,d3
+4F02	mov     d15,d4
+5F02	mov     d15,d5
+6F02	mov     d15,d6
+7F02	mov     d15,d7
+8F02	mov     d15,d8
+9F02	mov     d15,d9
+F282	mov     d2,#-1
+B282	mov     d2,#-5
+0282	mov     d2,#0
+1282	mov     d2,#1
+2061403B	mov     d2,#1556
+2282	mov     d2,#2
+2011003B	mov     d2,#272
+3282	mov     d2,#3
+4282	mov     d2,#4
+6282	mov     d2,#6
+7282	mov     d2,#7
+2200003B	mov     d2,#8192
+0202	mov     d2,d0
+1202	mov     d2,d1
+A202	mov     d2,d10
+C202	mov     d2,d12
+F202	mov     d2,d15
+3202	mov     d2,d3
+4202	mov     d2,d4
+5202	mov     d2,d5
+8202	mov     d2,d8
+9202	mov     d2,d9
+F382	mov     d3,#-1
+0382	mov     d3,#0
+1382	mov     d3,#1
+3000F03B	mov     d3,#15
+2382	mov     d3,#2
+3382	mov     d3,#3
+2302	mov     d3,d2
+F482	mov     d4,#-1
+0482	mov     d4,#0
+1482	mov     d4,#1
+4000A03B	mov     d4,#10
+4006403B	mov     d4,#100
+403E803B	mov     d4,#1000
+4000C03B	mov     d4,#12
+4008003B	mov     d4,#128
+4008103B	mov     d4,#129
+4333303B	mov     d4,#13107
+4000F03B	mov     d4,#15
+4400003B	mov     d4,#16384
+4001103B	mov     d4,#17
+2482	mov     d4,#2
+4001403B	mov     d4,#20
+400FF03B	mov     d4,#255
+4010003B	mov     d4,#256
+3482	mov     d4,#3
+4001F03B	mov     d4,#31
+4002003B	mov     d4,#32
+4482	mov     d4,#4
+4100103B	mov     d4,#4097
+4110103B	mov     d4,#4353
+4110303B	mov     d4,#4355
+4110603B	mov     d4,#4358
+4110903B	mov     d4,#4361
+5482	mov     d4,#5
+4020003B	mov     d4,#512
+6482	mov     d4,#6
+4004003B	mov     d4,#64
+7482	mov     d4,#7
+4000803B	mov     d4,#8
+4000903B	mov     d4,#9
+4005C03B	mov     d4,#92
+0402	mov     d4,d0
+1402	mov     d4,d1
+A402	mov     d4,d10
+B402	mov     d4,d11
+C402	mov     d4,d12
+E402	mov     d4,d14
+F402	mov     d4,d15
+2402	mov     d4,d2
+5402	mov     d4,d5
+8402	mov     d4,d8
+9402	mov     d4,d9
+0582	mov     d5,#0
+1582	mov     d5,#1
+5040003B	mov     d5,#1024
+5007403B	mov     d5,#116
+5007E03B	mov     d5,#126
+5008003B	mov     d5,#128
+5050003B	mov     d5,#1280
+5001003B	mov     d5,#16
+5001103B	mov     d5,#17
+2582	mov     d5,#2
+5001403B	mov     d5,#20
+500CC03B	mov     d5,#204
+5001C03B	mov     d5,#28
+3582	mov     d5,#3
+5016003B	mov     d5,#352
+4582	mov     d5,#4
+5582	mov     d5,#5
+6582	mov     d5,#6
+5004403B	mov     d5,#68
+5004C03B	mov     d5,#76
+5000803B	mov     d5,#8
+5005C03B	mov     d5,#92
+1502	mov     d5,d1
+F502	mov     d5,d15
+3502	mov     d5,d3
+8502	mov     d5,d8
+9502	mov     d5,d9
+0682	mov     d6,#0
+6001003B	mov     d6,#16
+2682	mov     d6,#2
+6002003B	mov     d6,#32
+6028003B	mov     d6,#640
+E602	mov     d6,d14
+5602	mov     d6,d5
+8602	mov     d6,d8
+0782	mov     d7,#0
+1782	mov     d7,#1
+7000A03B	mov     d7,#10
+2782	mov     d7,#2
+0702	mov     d7,d0
+1702	mov     d7,d1
+4702	mov     d7,d4
+0882	mov     d8,#0
+1882	mov     d8,#1
+803E803B	mov     d8,#1000
+C882	mov     d8,#12						; PATCHED MANUALLY
+2882	mov     d8,#2
+8010003B	mov     d8,#256
+801F403B	mov     d8,#500
+8028003B	mov     d8,#640
+0802	mov     d8,d0
+D802	mov     d8,d13
+2802	mov     d8,d2
+4802	mov     d8,d4
+5802	mov     d8,d5
+6802	mov     d8,d6
+9802	mov     d8,d9
+0982	mov     d9,#0
+1982	mov     d9,#1
+9000C03B	mov     d9,#12
+9000D03B	mov     d9,#13
+3982	mov     d9,#3
+901C003B	mov     d9,#448
+9003003B	mov     d9,#48
+9000903B	mov     d9,#9
+0902	mov     d9,d0
+2902	mov     d9,d2
+4902	mov     d9,d4
+6902	mov     d9,d6
+7902	mov     d9,d7
+8902	mov     d9,d8
+00D2	mov     e0,#0
+0800000B	mov     e0,d0
+0800F00B	mov     e0,d15
+0810DF0B	mov     e0,d15,d13
+08105F0B	mov     e0,d15,d5
+0800800B	mov     e0,d8
+A810010B	mov     e10,d1,d0
+A810450B	mov     e10,d5,d4
+A810650B	mov     e10,d5,d6
+A810670B	mov     e10,d7,d6
+C810010B	mov     e12,d1,d0
+02D2	mov     e2,#0
+04D2	mov     e4,#0
+4810AF0B	mov     e4,d15,d10
+48108F0B	mov     e4,d15,d8
+4810F20B	mov     e4,d2,d15
+4810820B	mov     e4,d2,d8
+4810230B	mov     e4,d3,d2
+4810670B	mov     e4,d7,d6
+4800800B	mov     e4,d8
+4810F80B	mov     e4,d8,d15
+4810980B	mov     e4,d8,d9
+4810F90B	mov     e4,d9,d15
+4810890B	mov     e4,d9,d8
+06D2	mov     e6,#0
+60E100FB	mov     e6,#3600
+6003C0FB	mov     e6,#60
+6810920B	mov     e6,d2,d9
+6810230B	mov     e6,d3,d2
+6810450B	mov     e6,d5,d4
+6810890B	mov     e6,d9,d8
+8810010B	mov     e8,d1,d0
+8800F00B	mov     e8,d15
+8810540B	mov     e8,d4,d5
+8810450B	mov     e8,d5,d4
+8810650B	mov     e8,d5,d6
+8810460B	mov     e8,d6,d4
+8810560B	mov     e8,d6,d5
+8810670B	mov     e8,d7,d6
+8800800B	mov     e8,d8
+0002003B	mov d0, #0x20                   ; If 0 "LED_OFF", switch off LED1: by writing 0x20
+0004003B	mov d0, #0x40
+1002003B	mov d1, #0x20
+1004003B	mov d1, #0x40
+B202	mov d2, d11
+0302	mov d3, d0
+1302	mov d3, d1
+F302	mov d3, d15
+0DA0	mov.a   a13,#0
+0EA0	mov.a   a14,#0
+0FA0	mov.a   a15,#0
+0F60	mov.a   a15,d0
+FF60	mov.a   a15,d15
+4F60	mov.a   a15,d4
+02A0	mov.a   a2,#0
+0260	mov.a   a2,d0
+F260	mov.a   a2,d15
+04A0	mov.a   a4,#0
+A4A0	mov.a   a4,#10
+B4A0	mov.a   a4,#11
+C4A0	mov.a   a4,#12
+24A0	mov.a   a4,#2
+34A0	mov.a   a4,#3
+44A0	mov.a   a4,#4
+54A0	mov.a   a4,#5
+74A0	mov.a   a4,#7
+94A0	mov.a   a4,#9
+0460	mov.a   a4,d0
+F460	mov.a   a4,d15
+05A0	mov.a   a5,#0
+25A0	mov.a   a5,#2
+35A0	mov.a   a5,#3
+55A0	mov.a   a5,#5
+65A0	mov.a   a5,#6
+06A0	mov.a   a6,#0
+C6A0	mov.a   a6,#12
+D6A0	mov.a   a6,#13
+56A0	mov.a   a6,#5
+FC40	mov.aa  a12,a15
+2C40	mov.aa  a12,a2
+4C40	mov.aa  a12,a4
+5C40	mov.aa  a12,a5
+6C40	mov.aa  a12,a6
+7C40	mov.aa  a12,a7
+2D40	mov.aa  a13,a2
+4D40	mov.aa  a13,a4
+5D40	mov.aa  a13,a5
+6D40	mov.aa  a13,a6
+7D40	mov.aa  a13,a7
+DE40	mov.aa  a14,a13
+2E40	mov.aa  a14,a2
+7E40	mov.aa  a14,a7
+2F40	mov.aa  a15,a2
+4F40	mov.aa  a15,a4
+5F40	mov.aa  a15,a5
+6F40	mov.aa  a15,a6
+C240	mov.aa  a2,a12
+E240	mov.aa  a2,a14
+F240	mov.aa  a2,a15
+4240	mov.aa  a2,a4
+5240	mov.aa  a2,a5
+C440	mov.aa  a4,a12
+D440	mov.aa  a4,a13
+E440	mov.aa  a4,a14
+F440	mov.aa  a4,a15
+2440	mov.aa  a4,a2
+5440	mov.aa  a4,a5
+6440	mov.aa  a4,a6
+C540	mov.aa  a5,a12
+D540	mov.aa  a5,a13
+E540	mov.aa  a5,a14
+F540	mov.aa  a5,a15
+4540	mov.aa  a5,a4
+C640	mov.aa  a6,a12
+BF40	mov.aa a15, a11
+F080	mov.d   d0,a15
+2080	mov.d   d0,a2
+FF80	mov.d   d15,a15
+2F80	mov.d   d15,a2
+4F80	mov.d   d15,a4
+F280	mov.d   d2,a15
+F480	mov.d   d4,a15
+03F0007B	movh    d0,#16128
+03F8007B	movh    d0,#16256
+0400007B	movh    d0,#16384
+0408007B	movh    d0,#16512
+041A007B	movh    d0,#16800
+0428007B	movh    d0,#17024
+042C807B	movh    d0,#17096
+0438007B	movh    d0,#17280
+0447A07B	movh    d0,#17530
+0448007B	movh    d0,#17536
+0458007B	movh    d0,#17792
+0A00007B	movh    d0,#40960
+0AF0007B	movh    d0,#44800
+0BF8007B	movh    d0,#49024
+0D00007B	movh    d0,#53248
+13F0007B	movh    d1,#16128
+13F8007B	movh    d1,#16256
+1400007B	movh    d1,#16384
+1418007B	movh    d1,#16768
+1433407B	movh    d1,#17204
+1100007B	movh    d1,#4096
+F000107B	movh    d15,#1
+F3F8007B	movh    d15,#16256
+F400007B	movh    d15,#16384
+F412007B	movh    d15,#16672
+F417007B	movh    d15,#16752
+F418007B	movh    d15,#16768
+F41A007B	movh    d15,#16800
+F41F007B	movh    d15,#16880
+F427007B	movh    d15,#17008
+F42C807B	movh    d15,#17096
+F42F007B	movh    d15,#17136
+F437007B	movh    d15,#17264
+F438007B	movh    d15,#17280
+F447A07B	movh    d15,#17530
+F448007B	movh    d15,#17536
+F458007B	movh    d15,#17792
+F469607B	movh    d15,#18070
+F478007B	movh    d15,#18304
+F47E107B	movh    d15,#18401
+F00FF07B	movh    d15,#255
+F800007B	movh    d15,#32768
+F900007B	movh    d15,#36864
+FA00007B	movh    d15,#40960
+FAF0007B	movh    d15,#44800
+2008007B	movh    d2,#128
+2400007B	movh    d2,#16384
+2500007B	movh    d2,#20480
+2501007B	movh    d2,#20496
+2601007B	movh    d2,#24592
+2701007B	movh    d2,#28688
+2100007B	movh    d2,#4096
+2A00007B	movh    d2,#40960
+2A00E07B	movh    d2,#40974
+2AF0007B	movh    d2,#44800
+2B00007B	movh    d2,#45056
+4A00E07B	movh    d4,#40974
+842C807B	movh    d8,#17096
+9000107B	movh    d9,#1
+9450007B	movh    d9,#17664
+CF003091	movh.a  a12,#61443
+DF000091	movh.a  a13,#61440
+F8000091	movh.a  a15,#32768
+FAF00091	movh.a  a15,#44800
+FAF01091	movh.a  a15,#44801
+FF000091	movh.a  a15,#61440
+FF002091	movh.a  a15,#61442
+FF003091	movh.a  a15,#61443
+FF004091	movh.a  a15,#61444
+FF006091	movh.a  a15,#61446
+FF800091	movh.a  a15,#63488
+27010091	movh.a  a2,#28688
+2AF01091	movh.a  a2,#44801
+2F003091	movh.a  a2,#61443
+2F004091	movh.a  a2,#61444
+2F01A091	movh.a  a2,#61466
+2F800091	movh.a  a2,#63488
+30001091	movh.a  a3,#1
+3000A091	movh.a  a3,#10
+3F003091	movh.a  a3,#61443
+3F004091	movh.a  a3,#61444
+3F01A091	movh.a  a3,#61466
+3F800091	movh.a  a3,#63488
+47010091	movh.a  a4,#28688
+4AF01091	movh.a  a4,#44801
+4F000091	movh.a  a4,#61440
+4F004091	movh.a  a4,#61444
+4F883091	movh.a  a4,#63619
+4F885091	movh.a  a4,#63621
+5AF01091	movh.a  a5,#44801
+5F001091	movh.a  a5,#61441
+5F002091	movh.a  a5,#61442
+0F003091	movh.a a0, #0xF003              ; Load the address of "P00_OMR" register into A0 "0xF003A004"
+00202053	mul     d0,d0,#2
+00204053	mul     d0,d0,#4
+10E2	mul     d0,d1
+F0E2	mul     d0,d15
+00204F53	mul     d0,d15,#4
+0020C453	mul     d0,d4,#12
+00280453	mul     d0,d4,#128
+00210453	mul     d0,d4,#16
+00202453	mul     d0,d4,#2
+00220453	mul     d0,d4,#32
+00240453	mul     d0,d4,#64
+00202553	mul     d0,d5,#2
+00204753	mul     d0,d7,#4
+000AD773	mul     d0,d7,d13
+80E2	mul     d0,d8
+00202853	mul     d0,d8,#2
+90E2	mul     d0,d9
+00202953	mul     d0,d9,#2
+00208953	mul     d0,d9,#8
+01E2	mul     d1,d0
+10206053	mul     d1,d0,#6
+10208053	mul     d1,d0,#8
+10202153	mul     d1,d1,#2
+10204153	mul     d1,d1,#4
+10202F53	mul     d1,d15,#2
+10204F53	mul     d1,d15,#4
+10204253	mul     d1,d2,#4
+41E2	mul     d1,d4
+10280453	mul     d1,d4,#128
+10204753	mul     d1,d7,#4
+A0210053	mul     d10,d0,#16
+C0208F53	mul     d12,d15,#8
+E0208053	mul     d14,d0,#8
+0FE2	mul     d15,d0
+F0201053	mul     d15,d0,#1
+F0264053	mul     d15,d0,#100
+F020C053	mul     d15,d0,#12
+F0202053	mul     d15,d0,#2
+F0218053	mul     d15,d0,#24
+F0220053	mul     d15,d0,#32
+F0204053	mul     d15,d0,#4
+F0206053	mul     d15,d0,#6
+F0240053	mul     d15,d0,#64
+F0208053	mul     d15,d0,#8
+F00A9073	mul     d15,d0,d9
+1FE2	mul     d15,d1
+F0202153	mul     d15,d1,#2
+F0220153	mul     d15,d1,#32
+F0204153	mul     d15,d1,#4
+F0206153	mul     d15,d1,#6
+F0240153	mul     d15,d1,#64
+F0208153	mul     d15,d1,#8
+F0204A53	mul     d15,d10,#4
+F0208A53	mul     d15,d10,#8
+F00AEA73	mul     d15,d10,d14
+F0204B53	mul     d15,d11,#4
+F020CC53	mul     d15,d12,#12
+F0202C53	mul     d15,d12,#2
+F0204C53	mul     d15,d12,#4
+F00A6D73	mul     d15,d13,d6
+F020CF53	mul     d15,d15,#12
+F0210F53	mul     d15,d15,#16
+F0202F53	mul     d15,d15,#2
+F0218F53	mul     d15,d15,#24
+F0220F53	mul     d15,d15,#32
+F0204F53	mul     d15,d15,#4
+F0208F53	mul     d15,d15,#8
+F020C253	mul     d15,d2,#12
+F0210253	mul     d15,d2,#16
+F0202253	mul     d15,d2,#2
+F0204253	mul     d15,d2,#4
+F0208253	mul     d15,d2,#8
+F020C353	mul     d15,d3,#12
+4FE2	mul     d15,d4
+F020C453	mul     d15,d4,#12
+F0202453	mul     d15,d4,#2
+F0218453	mul     d15,d4,#24
+F0204453	mul     d15,d4,#4
+F0208453	mul     d15,d4,#8
+F0202553	mul     d15,d5,#2
+F0206553	mul     d15,d5,#6
+F0208553	mul     d15,d5,#8
+F0204653	mul     d15,d6,#4
+F0214753	mul     d15,d7,#20
+8FE2	mul     d15,d8
+F020C853	mul     d15,d8,#12
+F0202853	mul     d15,d8,#2
+F0218853	mul     d15,d8,#24
+F0220853	mul     d15,d8,#32
+F0204853	mul     d15,d8,#4
+F0240853	mul     d15,d8,#64
+F0208853	mul     d15,d8,#8
+9FE2	mul     d15,d9
+F0202953	mul     d15,d9,#2
+F0214953	mul     d15,d9,#20
+F0218953	mul     d15,d9,#24
+F0204953	mul     d15,d9,#4
+F0208953	mul     d15,d9,#8
+20202F53	mul     d2,d15,#2
+30204153	mul     d3,d1,#4
+30204253	mul     d3,d2,#4
+F4E2	mul     d4,d15
+40204F53	mul     d4,d15,#4
+44E2	mul     d4,d4
+70208F53	mul     d7,d15,#8
+08E2	mul     d8,d0
+80208F53	mul     d8,d15,#8
+800A9F73	mul     d8,d15,d9
+0000	nop
+10A6	or      d0,d1
+F0A6	or      d0,d15
+20A6	or      d0,d2
+40A6	or      d0,d4
+50A6	or      d0,d5
+F1A6	or      d1,d15
+21A6	or      d1,d2
+31A6	or      d1,d3
+51A6	or      d1,d5
+B140108F	or      d11,d0,#1
+FBA6	or      d11,d15
+0196	or      d15,#1
+0C96	or      d15,#12
+8096	or      d15,#128
+0F96	or      d15,#15
+1096	or      d15,#16
+0296	or      d15,#2
+0396	or      d15,#3
+2096	or      d15,#32
+0496	or      d15,#4
+3096	or      d15,#48
+4096	or      d15,#64
+0896	or      d15,#8
+0FA6	or      d15,d0
+F141008F	or      d15,d0,#16
+F140808F	or      d15,d0,#8
+1FA6	or      d15,d1
+F140318F	or      d15,d1,#3
+F140338F	or      d15,d3,#3
+4FA6	or      d15,d4
+F140248F	or      d15,d4,#2
+F140348F	or      d15,d4,#3
+F140448F	or      d15,d4,#4
+5FA6	or      d15,d5
+6FA6	or      d15,d6
+F140388F	or      d15,d8,#3
+9FA6	or      d15,d9
+02A6	or      d2,d0
+12A6	or      d2,d1
+F2A6	or      d2,d15
+42A6	or      d2,d4
+82A6	or      d2,d8
+53A6	or      d3,d5
+93A6	or      d3,d9
+40A0200F	or      d4,d0,d2
+F4A6	or      d4,d15
+64A6	or      d4,d6
+50A0310F	or      d5,d1,d3
+F5A6	or      d5,d15
+45A6	or      d5,d4
+F6A6	or      d6,d15
+80A0200F	or      d8,d0,d2
+A8A6	or      d8,d10
+F8A6	or      d8,d15
+28A6	or      d8,d2
+90A0310F	or      d9,d1,d3
+B9A6	or      d9,d11
+29A6	or      d9,d2
+9140198F	or      d9,d9,#1
+9000	ret
+8000	rfe
+5032	rsub    d0,#0
+0101F18B	rsub    d0,d1,#31
+01010F8B	rsub    d0,d15,#16
+0102058B	rsub    d0,d5,#32
+0108088B	rsub    d0,d8,#128
+1101FF8B	rsub    d1,d15,#31
+5F32	rsub    d15,#0
+F1001F8B	rsub    d15,d15,#1
+F1010F8B	rsub    d15,d15,#16
+F1002F8B	rsub    d15,d15,#2
+F1008F8B	rsub    d15,d15,#8
+F108088B	rsub    d15,d8,#128
+5232	rsub    d2,#0
+2100E18B	rsub    d2,d1,#14
+2100E48B	rsub    d2,d4,#14
+5432	rsub    d4,#0
+4101FF8B	rsub    d4,d15,#31
+8100188B	rsub    d8,d8,#1
+5932	rsub    d9,#0
+9100808B	rsub    d9,d0,#8
+91008F8B	rsub    d9,d15,#8
+F006	sh      d0,#-1
+1006	sh      d0,#1
+3006	sh      d0,#3
+4006	sh      d0,#4
+5006	sh      d0,#5
+6006	sh      d0,#6
+0001008F	sh      d0,d0,#16
+0000100F	sh      d0,d0,d1
+0000F00F	sh      d0,d0,d15
+0000300F	sh      d0,d0,d3
+0000400F	sh      d0,d0,d4
+0000500F	sh      d0,d0,d5
+0000700F	sh      d0,d0,d7
+0000800F	sh      d0,d0,d8
+0000900F	sh      d0,d0,d9
+0000ED8F	sh      d0,d13,#14
+001FEF8F	sh      d0,d15,#-2
+001FCF8F	sh      d0,d15,#-4
+001F8F8F	sh      d0,d15,#-8
+001F848F	sh      d0,d4,#-8
+0000848F	sh      d0,d4,#8
+F106	sh      d1,#-1
+1106	sh      d1,#1
+6106	sh      d1,#6
+1000208F	sh      d1,d0,#2
+1000F00F	sh      d1,d0,d15
+1000010F	sh      d1,d1,d0
+1000F10F	sh      d1,d1,d15
+1000210F	sh      d1,d1,d2
+1000410F	sh      d1,d1,d4
+1000710F	sh      d1,d1,d7
+1000810F	sh      d1,d1,d8
+101F4F8F	sh      d1,d15,#-12
+10001F8F	sh      d1,d15,#1
+10002F8F	sh      d1,d15,#2
+10003F8F	sh      d1,d15,#3
+10000F0F	sh      d1,d15,d0
+10002F0F	sh      d1,d15,d2
+101F848F	sh      d1,d4,#-8
+1000848F	sh      d1,d4,#8
+D01F2F8F	sh      d13,d15,#-14
+EF06	sh      d15,#-2
+AF06	sh      d15,#-6
+1F06	sh      d15,#1
+2F06	sh      d15,#2
+3F06	sh      d15,#3
+4F06	sh      d15,#4
+5F06	sh      d15,#5
+6F06	sh      d15,#6
+F01F008F	sh      d15,d0,#-16
+F01FC08F	sh      d15,d0,#-4
+F01F418F	sh      d15,d1,#-12
+F0008F8F	sh      d15,d15,#8
+F0000F0F	sh      d15,d15,d0
+F0001F0F	sh      d15,d15,d1
+F000CF0F	sh      d15,d15,d12
+F0003F0F	sh      d15,d15,d3
+F0004F0F	sh      d15,d15,d4
+F0007F0F	sh      d15,d15,d7
+F0008F0F	sh      d15,d15,d8
+F001028F	sh      d15,d2,#16
+F01FF48F	sh      d15,d4,#-1
+F01F468F	sh      d15,d6,#-12
+F206	sh      d2,#-1
+6206	sh      d2,#6
+20001F0F	sh      d2,d15,d1
+2000020F	sh      d2,d2,d0
+2000120F	sh      d2,d2,d1
+1306	sh      d3,#1
+3000F30F	sh      d3,d3,d15
+3000230F	sh      d3,d3,d2
+F406	sh      d4,#-1
+1406	sh      d4,#1
+4000F20F	sh      d4,d2,d15
+401FF38F	sh      d4,d3,#-1
+4000740F	sh      d4,d4,d7
+5000450F	sh      d5,d5,d4
+F606	sh      d6,#-1
+1606	sh      d6,#1
+6000160F	sh      d6,d6,d1
+6000560F	sh      d6,d6,d5
+8000980F	sh      d8,d8,d9
+1906	sh      d9,#1
+0001018F	sh d0, d1, #16                  ; Shift of 16 bits
+0021008F	sha     d0,d0,#16
+0010100F	sha     d0,d0,d1
+0010A00F	sha     d0,d0,d10
+0010F00F	sha     d0,d0,d15
+0010400F	sha     d0,d0,d4
+0010500F	sha     d0,d0,d5
+0010800F	sha     d0,d0,d8
+0010900F	sha     d0,d0,d9
+00101A0F	sha     d0,d10,d1
+00208F8F	sha     d0,d15,#8
+003FF48F	sha     d0,d4,#-1
+0020848F	sha     d0,d4,#8
+003FB88F	sha     d0,d8,#-5
+F186	sha     d1,#-1
+2186	sha     d1,#2
+5186	sha     d1,#5
+1010010F	sha     d1,d1,d0
+1010A10F	sha     d1,d1,d10
+1010F10F	sha     d1,d1,d15
+1010210F	sha     d1,d1,d2
+1010910F	sha     d1,d1,d9
+1020EF8F	sha     d1,d15,#14
+1010860F	sha     d1,d6,d8
+EA86	sha     d10,#-2
+B010CB0F	sha     d11,d11,d12
+EF86	sha     d15,#-2
+DF86	sha     d15,#-3
+BF86	sha     d15,#-5
+1F86	sha     d15,#1
+2F86	sha     d15,#2
+3F86	sha     d15,#3
+4F86	sha     d15,#4
+5F86	sha     d15,#5
+6F86	sha     d15,#6
+F020808F	sha     d15,d0,#8
+F020218F	sha     d15,d1,#2
+F03FFA8F	sha     d15,d10,#-1
+F020FA8F	sha     d15,d10,#15
+F0202A8F	sha     d15,d10,#2
+F0208F8F	sha     d15,d15,#8
+F0100F0F	sha     d15,d15,d0
+F0101F0F	sha     d15,d15,d1
+F0102F0F	sha     d15,d15,d2
+F0104F0F	sha     d15,d15,d4
+F0105F0F	sha     d15,d15,d5
+F0106F0F	sha     d15,d15,d6
+F0108F0F	sha     d15,d15,d8
+F0109F0F	sha     d15,d15,d9
+F020238F	sha     d15,d3,#2
+F03FF48F	sha     d15,d4,#-1
+F03FB48F	sha     d15,d4,#-5
+F03F848F	sha     d15,d4,#-8
+F020248F	sha     d15,d4,#2
+F021058F	sha     d15,d5,#16
+F03FB88F	sha     d15,d8,#-5
+F020288F	sha     d15,d8,#2
+2010F20F	sha     d2,d2,d15
+2386	sha     d3,#2
+F486	sha     d4,#-1
+2486	sha     d4,#2
+4010040F	sha     d4,d4,d0
+5010050F	sha     d5,d5,d0
+5010F50F	sha     d5,d5,d15
+8886	sha     d8,#-8
+2886	sha     d8,#2
+8010E80F	sha     d8,d8,d14
+7986	sha     d9,#7
+9010490F	sha     d9,d9,d4
+01F8	st.a    [a10], 4,a15
+0AF8	st.a    [a10], 40,a15
+0BF8	st.a    [a10], 44,a15
+0CF8	st.a    [a10], 48,a15
+13F8	st.a    [a10], 76,a15
+02F8	st.a    [a10], 8,a15
+14F8	st.a    [a10], 80,a15
+15F8	st.a    [a10], 84,a15
+16F8	st.a    [a10], 88,a15
+ACF4	st.a    [a10],a12
+ADF4	st.a    [a10],a13
+AFF4	st.a    [a10],a15
+A2F4	st.a    [a10],a2
+A4F4	st.a    [a10],a4
+A6F4	st.a    [a10],a6
+CDF4	st.a    [a12],a13
+CEF4	st.a    [a12],a14
+CFF4	st.a    [a12],a15
+C2F4	st.a    [a12],a2
+DCF4	st.a    [a13],a12
+D2F4	st.a    [a13],a2
+3DE8	st.a    [a15], 12,a13
+32E8	st.a    [a15], 12,a2
+1CE8	st.a    [a15], 4,a12
+12E8	st.a    [a15], 4,a2
+15E8	st.a    [a15], 4,a5
+ACE8	st.a    [a15], 40,a12
+A2E8	st.a    [a15], 40,a2
+BDE8	st.a    [a15], 44,a13
+B2E8	st.a    [a15], 44,a2
+C2E8	st.a    [a15], 48,a2
+22E8	st.a    [a15], 8,a2
+26E8	st.a    [a15], 8,a6
+FCF4	st.a    [a15],a12
+FDF4	st.a    [a15],a13
+F2F4	st.a    [a15],a2
+F4F4	st.a    [a15],a4
+F5F4	st.a    [a15],a5
+2FF4	st.a    [a2],a15
+24F4	st.a    [a2],a4
+43EC	st.a    [a4], 12,a15
+41EC	st.a    [a4], 4,a15
+4AEC	st.a    [a4], 40,a15
+4BEC	st.a    [a4], 44,a15
+4CEC	st.a    [a4], 48,a15
+42EC	st.a    [a4], 8,a15
+4DF4	st.a    [a4],a13
+4FF4	st.a    [a4],a15
+42F4	st.a    [a4],a2
+45F4	st.a    [a4],a5
+6FF4	st.a    [a6],a15
+46302FE9	st.b    A2, 0x6130, d15
+AA2C	st.b    [a10], 10,d15
+AC2C	st.b    [a10], 12,d15
+A42C	st.b    [a10], 4,d15
+A82C	st.b    [a10], 8,d15
+A034	st.b    [a10],d0
+AF34	st.b    [a10],d15
+A434	st.b    [a10],d4
+A834	st.b    [a10],d8
+CC2C	st.b    [a12], 12,d15
+C82C	st.b    [a12], 8,d15
+C034	st.b    [a12],d0
+CF34	st.b    [a12],d15
+DA2C	st.b    [a13], 10,d15
+D42C	st.b    [a13], 4,d15
+DF34	st.b    [a13],d15
+A142FFE9	st.b    [a15], 0x1682, d15
+A15EFFE9	st.b    [a15], 0x169e, d15
+A17EFFE9	st.b    [a15], 0x16be, d15
+0610F0E9	st.b    [a15], 0x6010, d0
+0610FFE9	st.b    [a15], 0x6010, d15
+0612FFE9	st.b    [a15], 0x6012, d15
+0618FFE9	st.b    [a15], 0x6018, d15
+061DFFE9	st.b    [a15], 0x601d, d15
+0628FFE9	st.b    [a15], 0x6028, d15
+0629FFE9	st.b    [a15], 0x6029, d15
+062AFFE9	st.b    [a15], 0x602a, d15
+062DFFE9	st.b    [a15], 0x602d, d15
+0633FFE9	st.b    [a15], 0x6033, d15
+0639FFE9	st.b    [a15], 0x6039, d15
+063CF0E9	st.b    [a15], 0x603c, d0
+063CFFE9	st.b    [a15], 0x603c, d15
+063EF0E9	st.b    [a15], 0x603e, d0
+063EFFE9	st.b    [a15], 0x603e, d15
+063FFFE9	st.b    [a15], 0x603f, d15
+3634FFE9	st.b    [a15], 0x60f4, d15
+462CFFE9	st.b    [a15], 0x612c, d15
+4630FFE9	st.b    [a15], 0x6130, d15
+FA2C	st.b    [a15], 10,d15
+A828	st.b    [a15], 10,d8
+FC2C	st.b    [a15], 12,d15
+F42C	st.b    [a15], 4,d15
+4828	st.b    [a15], 4,d8
+F82C	st.b    [a15], 8,d15
+021FFFE9	st.b    [a15], 8223,d15
+F034	st.b    [a15],d0
+FF34	st.b    [a15],d15
+06182FE9	st.b    [a2], 0x6018, d15
+06192FE9	st.b    [a2], 0x6019, d15
+061A2FE9	st.b    [a2], 0x601a, d15
+061B2FE9	st.b    [a2], 0x601b, d15
+061C2FE9	st.b    [a2], 0x601c, d15
+06282FE9	st.b    [a2], 0x6028, d15
+062A2FE9	st.b    [a2], 0x602a, d15
+062B2FE9	st.b    [a2], 0x602b, d15
+062C2FE9	st.b    [a2], 0x602c, d15
+062E2FE9	st.b    [a2], 0x602e, d15
+06332FE9	st.b    [a2], 0x6033, d15
+06372FE9	st.b    [a2], 0x6037, d15
+46302FE9	st.b    [a2], 0x6130, d15
+2A2C	st.b    [a2], 10,d15
+2C2C	st.b    [a2], 12,d15
+242C	st.b    [a2], 4,d15
+2034	st.b    [a2],d0
+2F34	st.b    [a2],d15
+2234	st.b    [a2],d2
+2334	st.b    [a2],d3
+2434	st.b    [a2],d4
+4A2C	st.b    [a4], 10,d15
+4C2C	st.b    [a4], 12,d15
+442C	st.b    [a4], 4,d15
+482C	st.b    [a4], 8,d15
+4034	st.b    [a4],d0
+4F34	st.b    [a4],d15
+542C	st.b    [a5], 4,d15
+5F34	st.b    [a5],d15
+46302FE9	st.b    a[2], 0x6130, d15
+A5AC	st.h    [a10], 10,d15
+A6AC	st.h    [a10], 12,d15
+A2AC	st.h    [a10], 4,d15
+A4AC	st.h    [a10], 8,d15
+AFB4	st.h    [a10],d15
+A2B4	st.h    [a10],d2
+A4B4	st.h    [a10],d4
+A8B4	st.h    [a10],d8
+A9B4	st.h    [a10],d9
+CFB4	st.h    [a12],d15
+DFB4	st.h    [a13],d15
+0638FFF9	st.h    [a15], 0x6038, d15
+0638FFF9	st.h    [a15], 0x6038,d15
+F5AC	st.h    [a15], 10,d15
+F6AC	st.h    [a15], 12,d15
+0638FFF9	st.h    [a15], 24632,d15
+F2AC	st.h    [a15], 4,d15
+4BA8	st.h    [a15], 8,d11
+F4AC	st.h    [a15], 8,d15
+45A8	st.h    [a15], 8,d5
+49A8	st.h    [a15], 8,d9
+F0B4	st.h    [a15],d0
+FFB4	st.h    [a15],d15
+F2B4	st.h    [a15],d2
+F5B4	st.h    [a15],d5
+F8B4	st.h    [a15],d8
+0638FFF9	st.h    [a15]@los(0xf0036038),d15
+22AC	st.h    [a2], 4,d15
+2FB4	st.h    [a2],d15
+24B4	st.h    [a2],d4
+45AC	st.h    [a4], 10,d15
+46AC	st.h    [a4], 12,d15
+42AC	st.h    [a4], 4,d15
+44AC	st.h    [a4], 8,d15
+4FB4	st.h    [a4],d15
+52AC	st.h    [a5], 4,d15
+50B4	st.h    [a5],d0
+5FB4	st.h    [a5],d15
+60B4	st.h    [a6],d0
+61B4	st.h    [a6],d1
+0378	st.w    [a10], 12,d15
+0178	st.w    [a10], 4,d15
+0A78	st.w    [a10], 40,d15
+0B78	st.w    [a10], 44,d15
+0278	st.w    [a10], 8,d15
+A074	st.w    [a10],d0
+AA74	st.w    [a10],d10
+AF74	st.w    [a10],d15
+A274	st.w    [a10],d2
+A874	st.w    [a10],d8
+A974	st.w    [a10],d9
+C16C	st.w    [a12], 4,d15
+CA6C	st.w    [a12], 40,d15
+CB6C	st.w    [a12], 44,d15
+CC6C	st.w    [a12], 48,d15
+C074	st.w    [a12],d0
+CF74	st.w    [a12],d15
+C274	st.w    [a12],d2
+C874	st.w    [a12],d8
+D36C	st.w    [a13], 12,d15
+D16C	st.w    [a13], 4,d15
+DA6C	st.w    [a13], 40,d15
+D074	st.w    [a13],d0
+E26C	st.w    [a14], 8,d15
+0630FF59	st.w    [a15], 0x6030, d15
+0630FF59	st.w    [a15], 0x6030,d15
+0634F959	st.w    [a15], 0x6034, d9
+0634F959	st.w    [a15], 0x6034,d9
+2600F859	st.w    [a15], 0x6080, d8
+2600F859	st.w    [a15], 0x6080,d8
+2604F859	st.w    [a15], 0x6084, d8
+2604F859	st.w    [a15], 0x6084,d8
+2608F859	st.w    [a15], 0x6088, d8
+2608F859	st.w    [a15], 0x6088,d8
+3630FF59	st.w    [a15], 0x60f0, d15
+3630FF59	st.w    [a15], 0x60f0,d15
+4630F059	st.w    [a15], 0x6130, d0
+4630FF59	st.w    [a15], 0x6130, d15
+4630F059	st.w    [a15], 0x6130,d0
+4630FF59	st.w    [a15], 0x6130,d15
+8624FF59	st.w    [a15], 0x6224, d15
+8624FF59	st.w    [a15], 0x6224,d15
+06ACFF59	st.w    [a15], 0x682c, d15
+06ACFF59	st.w    [a15], 0x682c,d15
+3068	st.w    [a15], 12,d0
+F36C	st.w    [a15], 12,d15
+3268	st.w    [a15], 12,d2
+3568	st.w    [a15], 12,d5
+0630FF59	st.w    [a15], 24624,d15
+0634F959	st.w    [a15], 24628,d9
+2600F859	st.w    [a15], 24704,d8
+2604F859	st.w    [a15], 24708,d8
+2608F859	st.w    [a15], 24712,d8
+3630FF59	st.w    [a15], 24816,d15
+4630F059	st.w    [a15], 24880,d0
+4630FF59	st.w    [a15], 24880,d15
+8624FF59	st.w    [a15], 25124,d15
+06ACFF59	st.w    [a15], 26668,d15
+1068	st.w    [a15], 4,d0
+F16C	st.w    [a15], 4,d15
+1268	st.w    [a15], 4,d2
+1568	st.w    [a15], 4,d5
+1968	st.w    [a15], 4,d9
+FA6C	st.w    [a15], 40,d15
+FB6C	st.w    [a15], 44,d15
+FC6C	st.w    [a15], 48,d15
+2068	st.w    [a15], 8,d0
+2A68	st.w    [a15], 8,d10
+F26C	st.w    [a15], 8,d15
+2268	st.w    [a15], 8,d2
+2568	st.w    [a15], 8,d5
+2668	st.w    [a15], 8,d6
+2868	st.w    [a15], 8,d8
+C024FF59	st.w    [a15], 804,d15
+C028FF59	st.w    [a15], 808,d15
+C02CFF59	st.w    [a15], 812,d15
+C030FF59	st.w    [a15], 816,d15
+F074	st.w    [a15],d0
+F174	st.w    [a15],d1
+FA74	st.w    [a15],d10
+FF74	st.w    [a15],d15
+F274	st.w    [a15],d2
+F374	st.w    [a15],d3
+F474	st.w    [a15],d4
+F574	st.w    [a15],d5
+F674	st.w    [a15],d6
+F874	st.w    [a15],d8
+F974	st.w    [a15],d9
+0630FF59	st.w    [a15]@los(0xf0036030),d15
+0634F959	st.w    [a15]@los(0xf0036034),d9
+2600F859	st.w    [a15]@los(0xf0036080),d8
+2604F859	st.w    [a15]@los(0xf0036084),d8
+2608F859	st.w    [a15]@los(0xf0036088),d8
+3630FF59	st.w    [a15]@los(0xf00360f0),d15
+4630F059	st.w    [a15]@los(0xf0036130),d0
+4630FF59	st.w    [a15]@los(0xf0036130),d15
+8624FF59	st.w    [a15]@los(0xf0036224),d15
+06ACFF59	st.w    [a15]@los(0xf003682c),d15
+236C	st.w    [a2], 12,d15
+216C	st.w    [a2], 4,d15
+226C	st.w    [a2], 8,d15
+2074	st.w    [a2],d0
+2174	st.w    [a2],d1
+2F74	st.w    [a2],d15
+2474	st.w    [a2],d4
+2574	st.w    [a2],d5
+3074	st.w    [a3],d0
+3F74	st.w    [a3],d15
+436C	st.w    [a4], 12,d15
+416C	st.w    [a4], 4,d15
+4C6C	st.w    [a4], 48,d15
+426C	st.w    [a4], 8,d15
+C0244F59	st.w    [a4], 804,d15
+C0284F59	st.w    [a4], 808,d15
+4074	st.w    [a4],d0
+4174	st.w    [a4],d1
+4F74	st.w    [a4],d15
+4274	st.w    [a4],d2
+4474	st.w    [a4],d4
+4774	st.w    [a4],d7
+5F74	st.w    [a5],d15
+7F74	st.w    [a7],d15
+0074	st.w [a0], d0                   ; Store the D0 value to the target register
+10A2	sub     d0,d1
+0080010B	sub     d0,d1,d0
+F0A2	sub     d0,d15
+0052	sub     d0,d15,d0
+8052	sub     d0,d15,d8
+9052	sub     d0,d15,d9
+20A2	sub     d0,d2
+0080230B	sub     d0,d3,d2
+0080040B	sub     d0,d4,d0
+0080060B	sub     d0,d6,d0
+0080090B	sub     d0,d9,d0
+1080F20B	sub     d1,d2,d15
+31A2	sub     d1,d3
+FAA2	sub     d10,d15
+B080F90B	sub     d11,d9,d15
+0E52	sub     d14,d15,d0
+0FA2	sub     d15,d0
+1FA2	sub     d15,d1
+215A	sub     d15,d1,d2
+AFA2	sub     d15,d10
+2FA2	sub     d15,d2
+325A	sub     d15,d2,d3
+135A	sub     d15,d3,d1
+235A	sub     d15,d3,d2
+5FA2	sub     d15,d5
+155A	sub     d15,d5,d1
+8FA2	sub     d15,d8
+F85A	sub     d15,d8,d15
+9FA2	sub     d15,d9
+F95A	sub     d15,d9,d15
+F2A2	sub     d2,d15
+F4A2	sub     d4,d15
+24A2	sub     d4,d2
+54A2	sub     d4,d5
+05A2	sub     d5,d0
+C8A2	sub     d8,d12
+F8A2	sub     d8,d15
+0852	sub     d8,d15,d0
+F9A2	sub     d9,d15
+0952	sub     d9,d15,d0
+6820	sub.a   a10,#104
+7020	sub.a   a10,#112
+7820	sub.a   a10,#120
+8020	sub.a   a10,#128
+1020	sub.a   a10,#16
+A820	sub.a   a10,#168
+B820	sub.a   a10,#184
+1820	sub.a   a10,#24
+2020	sub.a   a10,#32
+2820	sub.a   a10,#40
+3020	sub.a   a10,#48
+3820	sub.a   a10,#56
+4020	sub.a   a10,#64
+4820	sub.a   a10,#72
+0820	sub.a   a10,#8
+5820	sub.a   a10,#88
+6020	sub.a   a10,#96
+20204201	sub.a   a2,a2,a4
+10C6	xor     d0,d1
+20C6	xor     d0,d2
+30C6	xor     d0,d3
+40C6	xor     d0,d4
+50C6	xor     d0,d5
+1183F18F	xor     d1,d1,#63
+F1C6	xor     d1,d15
+1183FF8F	xor     d1,d15,#63
+21C6	xor     d1,d2
+31C6	xor     d1,d3
+A183FF8F	xor     d10,d15,#63
+0FC6	xor     d15,d0
+1FC6	xor     d15,d1
+3FC6	xor     d15,d3
+02C6	xor     d2,d0
+12C6	xor     d2,d1
+F2C6	xor     d2,d15
+2183FF8F	xor     d2,d15,#63
+32C6	xor     d2,d3
+03C6	xor     d3,d0
+3183F08F	xor     d3,d0,#63
+F3C6	xor     d3,d15
+04C6	xor     d4,d0
+4183F08F	xor     d4,d0,#63
+14C6	xor     d4,d1
+F4C6	xor     d4,d15
+94C6	xor     d4,d9
+16C6	xor     d6,d1
+F6C6	xor     d6,d15
+8183FF8F	xor     d8,d15,#63
+F9C6	xor     d9,d15

@@ -1,0 +1,9 @@
+TASM Encoder Validation - SIZE MISMATCH REPORT
+================================================================================
+Total Size Mismatches: 0
+
+[OK] All size mismatches have been resolved with -O32 (force 32-bit).
+
+This means all instructions that had size differences between TASM
+(16-bit encoding) and the reference (32-bit encoding) were successfully
+re-encoded using the -O32 flag and now match the reference opcodes.
