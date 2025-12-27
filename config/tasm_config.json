@@ -1,0 +1,21 @@
+{
+  "architecture": {
+    "endianness": "little",
+    "word_size": 32,
+    "comment": "Endianness: 'little' or 'big'. Word size: 16 or 32 bits"
+  },
+  "paths": {
+    "pdf_manual": ".\\Processors\\tricore\\data\\manuals\\infineon-tricore-tc1.8-architecture-volume2-usermanual-en.pdf",
+    "instruction_set": ".\\Processors\\tricore\\data\\languages\\tricore_tc1.6_instruction_set.xlsx",
+    "output_dir": "output/assembly_build",
+    "comment": "Absolute paths to processor documentation and instruction set definitions. output_dir is relative to project root."
+  },
+  "output": {
+    "generate_lst": true,
+    "generate_bin": true,
+    "generate_hex": true,
+    "generate_map": true,
+    "enable_macros": true,
+    "comment": "Control which output files are generated. enable_macros controls macro expansion (can be overridden with --no-macros)"
+  }
+}
